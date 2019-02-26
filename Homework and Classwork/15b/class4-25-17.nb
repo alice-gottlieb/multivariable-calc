@@ -1,0 +1,11 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+TextData[{"Class"," ","4","/","25","/","17"}],
+"Title",CellID->1],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"Integrate","[",RowBox[
+{RowBox[{RowBox[{"(",RowBox[{"Cos","[","x","]"}],")"}],"^","2"}],",",RowBox[{"{",RowBox[
+{"x",",","0",",",RowBox[{"2","\[Pi]"}]}],"}"}]}],"]"}]],"Input",CellID->2,CellLabel->"In[2]:= "],Cell[
+BoxData[
+"\[Pi]",StandardForm],"Output",CellID->10,CellLabel->"Out[2]= "]},Open]]},Open]]},
+StyleDefinitions->"Default.nb",FrontEndVersion->"10.0 for Wolfram Cloud Platform (June 2 2014)"]

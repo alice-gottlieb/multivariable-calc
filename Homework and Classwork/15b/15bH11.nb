@@ -1,0 +1,51 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+TextData[{"Ch",StyleBox[RowBox[{"."," "}]],"15","B"," ","H11"}],
+"Title",CellID->1],Cell[
+CellGroupData[{Cell[
+TextData[{"15.8"," ","ex",StyleBox[
+RowBox[{"."," "}]],"11",StyleBox[RowBox[{","," "}]],"12",StyleBox[RowBox[{","," "}]],"22",StyleBox[
+RowBox[{","," "}]],"23",StyleBox[RowBox[{","," "}]],"25"}],"Subtitle",CellID->2],Cell[
+BoxData[
+RowBox[{"Needs","[","\"BellMultiVarGottlieb`\"","]"}]],"Input",CellID->6,CellLabel->"In[19]:= "],Cell[
+CellGroupData[
+{Cell[
+TextData[{"11","."}],"Section",CellID->4],Cell[
+CellGroupData[{Cell[
+BoxData[
+RowBox[{"Curl","[",RowBox[{RowBox[{"{",RowBox[{RowBox[{"x","-","y"}],",",RowBox[{"y","-","z"}],",",RowBox[
+{"z","-","x"}]}],"}"}],",",RowBox[{"{",RowBox[{"x",",","y",",","z"}],"}"}]}],"]"}]],
+"Input",CellID->7,CellLabel->"In[20]:= "],Cell[
+BoxData[RowBox[{"{",RowBox[{"1",",","1",",","1"}],"}"}],
+StandardForm],"Output",CellID->9,CellLabel->"Out[20]= "]},Open]]},Open]],Cell[
+CellGroupData[
+{Cell[
+TextData[{"12","."}],"Section",CellID->14],Cell[
+CellGroupData[{Cell[
+BoxData[
+RowBox[{"Curl","[",RowBox[{RowBox[{"{",RowBox[{RowBox[{"z","+",RowBox[{"Sin","[","x","]"}]}],",",RowBox[
+{"x","+",RowBox[{"y","^","2"}]}],",",RowBox[{"y","+",RowBox[{"E","^","z"}]}]}],"}"}],",",RowBox[
+{"{",RowBox[{"x",",","y",",","z"}],"}"}]}],"]"}]],"Input",CellID->15,CellLabel->"In[21]:= "],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"1",",","1",",","1"}],"}"}],StandardForm],"Output",CellID->17,
+CellLabel->"Out[21]= "]},Open]]},Open]],Cell[
+CellGroupData[{Cell[
+TextData[{"23","."}],
+"Section",CellID->22],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"Curl","[",RowBox[
+{RowBox[{"{",RowBox[{RowBox[{RowBox[{RowBox[{"x","^","2"}],"*","y"}],"-",RowBox[{"z","^","2"}]}],",",RowBox[
+{RowBox[{"y","^","3"}],"-","x"}],",",RowBox[{RowBox[{"2","x"}],"+",RowBox[{"3","z"}],"-","1"}]}],"}"}],",",RowBox[
+{"{",RowBox[{"x",",","y",",","z"}],"}"}]}],"]"}]],"Input",CellID->23,CellLabel->"In[22]:= "],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"0",",",RowBox[{RowBox[{"-","2"}],"-",RowBox[{"2"," ","z"}]}],",",RowBox[
+{RowBox[{"-","1"}],"-",SuperscriptBox["x","2"]}]}],"}"}],StandardForm],"Output",CellID->25,
+CellLabel->"Out[22]= "]},Open]],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"Integrate","[",RowBox[
+{RowBox[{RowBox[{"(",RowBox[{"Cos","[","t","]"}],")"}],"^","2"}],",","t"}],"]"}]],
+"Input",CellID->30,CellLabel->"In[23]:= "],Cell[
+BoxData[RowBox[{FractionBox["t",
+"2"],"+",RowBox[{FractionBox["1","4"]," ",RowBox[{"Sin","[",RowBox[{"2"," ","t"}],"]"}]}]}],
+StandardForm],"Output",CellID->31,CellLabel->"Out[23]= "]},Open]]},Open]]},Open]]},
+Open]]},StyleDefinitions->"Default.nb",FrontEndVersion->"10.0 for Wolfram Cloud Platform (June 2 2014)"]

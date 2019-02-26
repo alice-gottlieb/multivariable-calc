@@ -1,0 +1,92 @@
+Notebook[{Cell[
+"\<Functions\>","Text",CellID->16],Cell[
+BoxData[{RowBox[{"SetAttributes","[","LagrangeSolve2D",","," ","HoldAll","]",";"}],"\n",RowBox[
+{"LagrangeSolve2D","[","f_",","," ","g_",","," ","{","x_",","," ","y_","}","]"," ",":="," ","\n"," ","Module","[","{","localF",",","localG",",","localX",",","localY",",","\[Lambda]",",","s",",","n",",","p","}",",","\n",StyleBox[
+RowBox[{" "," "," "}]],"localX","=","x",";","\n",StyleBox[RowBox[{"\[NonBreakingSpace]"," "," "}]],"localY","=","y",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]"," "," "}]],"localF","=","f",";","\n",StyleBox[RowBox[
+{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localG","=","g",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"s","="," ","NSolve","[","D","[","localF",",","localX","]","==","\[Lambda]","*","D","[","localG",",","localX","]","&&","D","[","localF",",","localY","]","==","\[Lambda]","*","D","[","localG",",","localY","]","&&","localG","==","0",",","{","localX",","," ","localY",",","\[Lambda]","}","]",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"n","=","{","localX",",","localY","}","/.","s",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"p","=","(",StyleBox[RowBox[
+{"l","o","calF"}]],"/.","{","localX","\[Rule]","n","[","[","#","]","]","[","[","1","]","]",",","localY","\[Rule]","n","[","[","#","]","]","[","[","2","]","]","}",")","&","/@","Range","[","Length","[","n","]","]",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"{","Max","[","p","]",",","Min","[","p","]","}","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"]"}],"\n",RowBox[{StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]]}],"\n",RowBox[{"SetAttributes","[","LagrangeSolve3D",","," ","HoldAll","]",";"}],"\n",RowBox[
+{"LagrangeSolve3D","[","f_",","," ","g_",","," ","{","x_",","," ","y_",",","z_","}","]"," ",":="," ","\n"," ","Module","[","{","localF",",","localG",",","localX",",","localY",",","localZ",",","\[Lambda]",",","s",",","n",",","p","}",",","\n",StyleBox[
+RowBox[{" "," "," "}]],StyleBox[RowBox[{"l","o","calX"}]],"=","x",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]"," "," "}]],StyleBox[RowBox[{"l","o","calY"}]],"=","y",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localZ","=","z",";","\[NonBreakingSpace]","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]"," "," "}]],StyleBox[RowBox[{"l","o","calF"}]],"=","f",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],StyleBox[RowBox[{"l","o","calG"}]],"=","g",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"s","="," ","NSolve","[","D","[","localF",",","localX","]","==","\[Lambda]","*","D","[","localG",",","localX","]","&&","D","[","localF",",","localY","]","==","\[Lambda]","*","D","[","localG",",","localY","]","&&","D","[","localF",",","localZ","]","==","\[Lambda]","*","D","[","localG",",","localZ","]","&&","localG","==","0",",","{","localX",","," ","localY",",","localZ",",","\[Lambda]","}","]",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"n","=","{","localX",",","localY",",","localZ","}","/.","s",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"p","=","(",StyleBox[RowBox[
+{"lo","c","a","lF"}]],"/.","{","localX","\[Rule]","n","[","[","#","]","]","[","[","1","]","]",",","localY","\[Rule]","n","[","[","#","]","]","[","[","2","]","]",",","localZ","\[Rule]","n","[","[","#","]","]","[","[","3","]","]","}",")","&","/@","Range","[","Length","[","n","]","]",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"{",StyleBox[RowBox[{"M","ax"}]],"[","p","]",",","Min","[","p","]","}","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"]"}],"\n","\n","\n",RowBox[
+{"SetAttributes","[","DiscrimFunc",",","HoldAll","]",";"}],"\n",RowBox[{"DiscrimFunc","[","f_",",","a_",",","b_",",","{","x_",",","y_","}","]",":=","\n","Module","[","{","localX",",","localY",",","localF",","," ","cp",",","s",",","n",",","ans",",","discrim",",","discrimFunction","}",",","\n",StyleBox[
+RowBox[{"lo","c","a","lX"}]],"=","x",";","\n",StyleBox[RowBox[{"lo","c","a","l","Y"}]],"=","y",";","\n",StyleBox[
+RowBox[{"lo","c","a","l","F"}]],"=","f",";","\n","(","D","[","localF",",","localX",",","localX","]","*","D","[","localF",",","localY",",","localY","]","-","(","D","[","localF",",","localX",",","localY","]",")","^","2",")","/.","{","localX","\[Rule]","a",",","localY","\[Rule]","b","}","\n","]"}],"\n","\n",RowBox[
+{"SetAttributes","[","CriticalPoints2D",",","HoldAll","]"}],"\n",RowBox[{"CriticalPoints2D","[","f_",",","{","x_",",","y_","}","]",":=","\n"," ","Module","[","{","localX",",","localY",",","localF",","," ","cp",",","s",",","n",",","ans",",","discrim",",","discrimFunction",",","fxx",",","point","}",",","\n","\[NonBreakingSpace]",StyleBox[
+RowBox[{"lo","c","a","lX"}]],"=","x",";","\n","\[NonBreakingSpace]",StyleBox[RowBox[
+{"lo","c","a","l","Y"}]],"=","y",";","\n","\[NonBreakingSpace]",StyleBox[RowBox[{"lo","c","a","l","F"}]],"=","f",";","\n","\[NonBreakingSpace]","s","=","NSolve","[","D","[","localF",",","localX","]","==","0","&&"," ","D","[","localF",",","localY","]","==","0",",","{","localX",",","localY","}","]",";","\n","\[NonBreakingSpace]","n","=","{","localX",",","localY","}","/.","s",";","\n","\[NonBreakingSpace]","discrim","=","(","DiscrimFunc","[","localF",",","a",",","b",",","{","localX",",","localY","}","]","/.","{","a","\[Rule]","n","[","[","#","]","]","[","[","1","]","]",",","b","\[Rule]","n","[","[","#","]","]","[","[","2","]","]","}",")","&","/@","Range","[","Length","[","n","]","]",";","\n","\[NonBreakingSpace]","fxx","=","(","D","[","localF",",","localX",",","localX","]","/.","{","localX","\[Rule]","n","[","[","#","]","]","[","[","1","]","]",",","localY","\[Rule]","n","[","[","#","]","]","[","[","2","]","]","}",")","&","/@","Range","[","Length","[","n","]","]",";","\n","\[NonBreakingSpace]","ans","=","(","{","{","localX",",","localY","}",",","discrim",",","fxx","}","/.","{","localX","\[Rule]","n","[","[","#","]","]","[","[","1","]","]",",","localY","\[Rule]","n","[","[","#","]","]","[","[","2","]","]",",","discrim","\[Rule]","discrim","[","[","#","]","]",",","fxx","\[Rule]","fxx","[","[","#","]","]","}",")","&","/@","Range","[","Length","[","n","]","]","\n","\[NonBreakingSpace]","]"}]}],
+"Input",CellID->15,CellLabel->"In[15]:= "],Cell[
+BoxData[RowBox[{RowBox[{"f","[",RowBox[
+{"a_",",","b_"}],"]"}],":=",RowBox[{"Sqrt","[",RowBox[{RowBox[{RowBox[{"(",RowBox[
+{"a","-",RowBox[{"3","b"}]}],")"}],"^","2"}],"+",RowBox[{"9","^","2"}],"+",RowBox[
+{"3","^","2"}]}],"]"}]}]],"Input",CellID->1,CellLabel->"In[1]:= "],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"{",RowBox[{RowBox[{"f","[",RowBox[{"4",",","12"}],"]"}],",",RowBox[
+{"f","[",RowBox[{RowBox[{"-","4"}],",",RowBox[{"-","12"}]}],"]"}],",",RowBox[{"f","[",RowBox[
+{"4",",",RowBox[{"-","12"}]}],"]"}],",",RowBox[{"f","[",RowBox[{RowBox[{"-","4"}],",","12"}],"]"}],",",RowBox[
+{"f","[",RowBox[{"12",",","4"}],"]"}],",",RowBox[{"f","[",RowBox[{"12",",",RowBox[
+{"-","4"}]}],"]"}],",",RowBox[{"f","[",RowBox[{RowBox[{"-","12"}],",","4"}],"]"}],",",RowBox[
+{"f","[",RowBox[{RowBox[{"-","12"}],",",RowBox[{"-","4"}]}],"]"}]}],"}"}]],"Input",
+CellID->2,CellLabel->"In[2]:= "],Cell[
+BoxData[RowBox[{"{",RowBox[{SqrtBox["1114"],",",SqrtBox[
+"1114"],",",RowBox[{"13"," ",SqrtBox["10"]}],",",RowBox[{"13"," ",SqrtBox["10"]}],",",RowBox[
+{"3"," ",SqrtBox["10"]}],",",RowBox[{"3"," ",SqrtBox["74"]}],",",RowBox[{"3"," ",SqrtBox[
+"74"]}],",",RowBox[{"3"," ",SqrtBox["10"]}]}],"}"}],StandardForm],"Output",CellID->3,
+CellLabel->"Out[2]= "]},Open]],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"{",RowBox[
+{RowBox[{"Max","[","%","]"}],",",RowBox[{"Min","[","%","]"}]}],"}"}]],"Input",CellID->9,
+CellLabel->"In[3]:= "],Cell[
+BoxData[RowBox[{"{",RowBox[{RowBox[{"13"," ",SqrtBox[
+"10"]}],",",RowBox[{"3"," ",SqrtBox["10"]}]}],"}"}],StandardForm],"Output",CellID->10,
+CellLabel->"Out[3]= "]},Open]],Cell[
+BoxData[RowBox[{RowBox[{"T","[",RowBox[{"x_",",","y_"}],"]"}],":=",RowBox[
+{RowBox[{"3",RowBox[{"x","^","2"}]}],"+",RowBox[{"3",RowBox[{"y","^","2"}]}],"-",RowBox[
+{"12","x"}],"-",RowBox[{"6","y"}],"+","18"}]}]],"Input",CellID->17,CellLabel->"In[13]:= "],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"{",RowBox[{RowBox[{"T","[",RowBox[{RowBox[{"-","2"}],",","1"}],"]"}],",",RowBox[
+{"T","[",RowBox[{"0",",","1"}],"]"}],",",RowBox[{"T","[",RowBox[{RowBox[{"-","1"}],",","2"}],"]"}]}],"}"}]],
+"Input",CellID->20,CellLabel->"In[14]:= "],Cell[
+BoxData[RowBox[{"{",RowBox[{"51",",","15",",","33"}],"}"}],
+StandardForm],"Output",CellID->21,CellLabel->"Out[14]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"CriticalPoints2D","[",RowBox[{RowBox[{RowBox[{"(",RowBox[
+{RowBox[{"x","^","2"}],"+",RowBox[{"y","^","2"}]}],")"}],RowBox[{"E","^",RowBox[{"(",RowBox[
+{RowBox[{"-",RowBox[{"x","^","2"}]}],"-",RowBox[{"4",RowBox[{"y","^","2"}]}]}],")"}]}]}],",",RowBox[
+{"{",RowBox[{"x",",","y"}],"}"}]}],"]"}]],"Input",CellID->4,CellLabel->"In[23]:= "],Cell[
+BoxData[
+TemplateBox[{"Solve","incnst","\"Inconsistent or redundant transcendental equation. After reduction, the bad equation is \\!\\(\\*TagBox[RowBox[{RowBox[{\\\"-\\\", \\\"3\\\"}], \\\"-\\\", RowBox[{\\\"4\\\", \\\" \\\", RowBox[{RowBox[{\\\"InverseFunction\\\", \\\"[\\\", RowBox[{RowBox[{RowBox[{\\\"#1\\\", \\\" \\\", SuperscriptBox[\\\"\[ExponentialE]\\\", \\\"#1\\\"]}], \\\"&\\\"}], \\\",\\\", \\\"1\\\", \\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", RowBox[{FractionBox[\\\"1\\\", \\\"4\\\"], \\\" \\\", SuperscriptBox[\\\"\[ExponentialE]\\\", RowBox[{FractionBox[\\\"1\\\", \\\"4\\\"], \\\" \\\", RowBox[{\\\"(\\\", RowBox[{\\\"1\\\", \\\"+\\\", RowBox[{\\\"Times\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\"+\\\", RowBox[{\\\"Times\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}]}], \\\")\\\"}]}]], \\\" \\\", RowBox[{\\\"(\\\", RowBox[{\\\"1\\\", \\\"-\\\", RowBox[{\\\"4\\\", \\\" \\\", SuperscriptBox[\\\"x\\\", \\\"2\\\"]}], \\\"-\\\", RowBox[{\\\"4\\\", \\\" \\\", SuperscriptBox[\\\"y\\\", \\\"2\\\"]}]}], \\\")\\\"}]}], \\\"]\\\"}]}]}], Short[#1, 5] & ]\\) == 0.\"",2,23,2,23381115029332465124,$Failed},
+"MessageTemplate"],StandardForm],"Message","MSG",CellID->5],Cell[
+BoxData[TemplateBox[
+{"NSolve","ifun","\"Inverse functions are being used by \\!\\(\\*TagBox[\\\"NSolve\\\", Short[#1, 5] & ]\\), so some solutions may not be found; use Reduce for complete solution information.\"",2,23,3,23381115029332465124,$Failed},
+"MessageTemplate"],StandardForm],"Message","MSG",CellID->7],Cell[
+BoxData[TemplateBox[
+{"NSolve","svars","\"Equations may not give solutions for all \\\"solve\\\" variables.\"",2,23,4,23381115029332465124,$Failed},
+"MessageTemplate"],StandardForm],"Message","MSG",CellID->8],Cell[
+BoxData[RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{RowBox[{"-","1.`"}],",","0.`"}],"}"}],",","3.248046797678705`",",",RowBox[
+{"-","1.4715177646857693`"}]}],"}"}],",",RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{"0.`",",","0.`"}],"}"}],",","4.`",",","2.`"}],"}"}],",",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"1.`",",","0.`"}],"}"}],",","3.248046797678705`",",",RowBox[
+{"-","1.4715177646857693`"}]}],"}"}],",",RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{"0.`",",",RowBox[
+{"-","0.5`"}]}],"}"}],",",RowBox[{"-","0.8120116994196762`"}],",","0.5518191617571635`"}],"}"}],",",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"0.`",",","0.5`"}],"}"}],",",RowBox[{"-","0.8120116994196762`"}],",","0.5518191617571635`"}],"}"}]}],"}"}],
+StandardForm],"Output",CellID->11,CellLabel->"Out[23]= "]},Open]]},StyleDefinitions->"Default.nb",
+FrontEndVersion->"10.0 for Wolfram Cloud Platform (June 2 2014)"]

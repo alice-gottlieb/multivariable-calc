@@ -1,0 +1,7 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+TextData[{"Ch",StyleBox[RowBox[{"."," "}]],"15a"," ","H2"}],
+"Title",CellID->1],Cell[
+BoxData[RowBox[{"Needs","[","\"BellMultiVarGottlieb`\"","]"}]],
+"Input",CellID->2,CellLabel->"In[1]:= "]},Open]]},StyleDefinitions->"Default.nb",
+FrontEndVersion->"10.0 for Wolfram Cloud Platform (June 2 2014)"]

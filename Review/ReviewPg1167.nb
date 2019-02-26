@@ -1,0 +1,10 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+TextData[{"Review"," ","Pg",StyleBox[RowBox[
+{"."," "}]],"1167"}],"Title",CellID->1],Cell[
+CellGroupData[{Cell[
+TextData[{"31",StyleBox[
+RowBox[{","," "}]],"32",StyleBox[RowBox[{","," "}]],"35",StyleBox[RowBox[{","," "}]],"36"}],
+"Subtitle",CellID->2],Cell[
+TextData[{"31","."}],"Section",CellID->4]},Open]]},Open]]},
+StyleDefinitions->"Default.nb",FrontEndVersion->"10.0 for Wolfram Cloud Platform (June 2 2014)"]

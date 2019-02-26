@@ -1,0 +1,74 @@
+Notebook[{Cell[
+BoxData[RowBox[{"Needs","[","\"BellMultiVarGottlieb`\"","]"}]],"Input",
+CellID->3,CellLabel->"In[1]:= "],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{RowBox[
+{"12","*","8"}],"-",RowBox[{RowBox[{"(",RowBox[{"8","^","2"}],")"}],"/","2"}],"-",RowBox[
+{RowBox[{"(",RowBox[{"8","y"}],")"}],"/","8"}]}]],"Input",CellID->1,CellLabel->"In[1]:= "],Cell[
+BoxData[
+RowBox[{"64","-","y"}],StandardForm],"Output",CellID->2,CellLabel->"Out[1]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{RowBox[{"16","*","64"}],"-",RowBox[{RowBox[{"(",RowBox[{"16","^","2"}],")"}],"/","2"}]}]],
+"Input",CellID->4,CellLabel->"In[2]:= "],Cell[
+BoxData["896",StandardForm],"Output",
+CellID->5,CellLabel->"Out[2]= "]},Open]],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[
+{"LagrangeSolve2D","[",RowBox[{RowBox[{RowBox[{"4",RowBox[{"x","^","2"}]}],"-",RowBox[
+{"4","x","*","y"}],"+",RowBox[{"y","^","2"}]}],",",RowBox[{RowBox[{"x","^","2"}],"+",RowBox[
+{"y","^","2"}],"-","25"}],",",RowBox[{"{",RowBox[{"x",",","y"}],"}"}]}],"]"}]],"Input",
+CellID->6,CellLabel->"In[2]:= "],Cell[
+BoxData[RowBox[{"{",RowBox[{"125.00000000000011`",",","0.`"}],"}"}],
+StandardForm],"Output",CellID->75,CellLabel->"Out[2]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"Sort","[",RowBox[{"{",RowBox[{"125.00000000000011`",",","0.`"}],"}"}],"]"}]],
+"Input",NumberMarks->False,CellLabel->"In[3]:= "],Cell[
+BoxData[RowBox[{"{",RowBox[
+{"0.`",",","125.00000000000011`"}],"}"}],StandardForm],"Output",CellID->82,CellLabel->"Out[3]= "]},
+Open]],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"CriticalPoints2D","[",RowBox[{RowBox[
+{RowBox[{"(",RowBox[{RowBox[{"x","^","2"}],"+",RowBox[{"y","^","2"}]}],")"}],"*",RowBox[
+{"E","^",RowBox[{"(",RowBox[{RowBox[{"-",RowBox[{"x","^","2"}]}],"-",RowBox[{"4","*",RowBox[
+{"y","^","2"}]}]}],")"}]}]}],",",RowBox[{"{",RowBox[{"x",",","y"}],"}"}]}],"]"}]],
+"Input",CellID->13,CellLabel->"In[4]:= "],Cell[
+BoxData[TemplateBox[{"Solve","incnst","\"Inconsistent or redundant transcendental equation. After reduction, the bad equation is \\!\\(\\*TagBox[RowBox[{RowBox[{\\\"-\\\", \\\"3\\\"}], \\\"-\\\", RowBox[{\\\"4\\\", \\\" \\\", RowBox[{RowBox[{\\\"InverseFunction\\\", \\\"[\\\", RowBox[{RowBox[{RowBox[{\\\"#1\\\", \\\" \\\", SuperscriptBox[\\\"\[ExponentialE]\\\", \\\"#1\\\"]}], \\\"&\\\"}], \\\",\\\", \\\"1\\\", \\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", RowBox[{FractionBox[\\\"1\\\", \\\"4\\\"], \\\" \\\", SuperscriptBox[\\\"\[ExponentialE]\\\", RowBox[{FractionBox[\\\"1\\\", \\\"4\\\"], \\\" \\\", RowBox[{\\\"(\\\", RowBox[{\\\"1\\\", \\\"+\\\", RowBox[{\\\"Times\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\"+\\\", RowBox[{\\\"Times\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}]}], \\\")\\\"}]}]], \\\" \\\", RowBox[{\\\"(\\\", RowBox[{\\\"1\\\", \\\"-\\\", RowBox[{\\\"4\\\", \\\" \\\", SuperscriptBox[\\\"x\\\", \\\"2\\\"]}], \\\"-\\\", RowBox[{\\\"4\\\", \\\" \\\", SuperscriptBox[\\\"y\\\", \\\"2\\\"]}]}], \\\")\\\"}]}], \\\"]\\\"}]}]}], Short[#1, 5] & ]\\) == 0.\"",2,4,1,27662118111763941501,$Failed},
+"MessageTemplate"],StandardForm],"Message","MSG",CellID->87],Cell[
+BoxData[TemplateBox[
+{"NSolve","ifun","\"Inverse functions are being used by \\!\\(\\*TagBox[\\\"NSolve\\\", Short[#1, 5] & ]\\), so some solutions may not be found; use Reduce for complete solution information.\"",2,4,2,27662118111763941501,$Failed},
+"MessageTemplate"],StandardForm],"Message","MSG",CellID->89],Cell[
+BoxData[TemplateBox[
+{"NSolve","svars","\"Equations may not give solutions for all \\\"solve\\\" variables.\"",2,4,3,27662118111763941501,$Failed},
+"MessageTemplate"],StandardForm],"Message","MSG",CellID->90],Cell[
+BoxData[RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{RowBox[{"-","1.`"}],",","0.`"}],"}"}],",","3.248046797678705`",",",RowBox[
+{"-","1.4715177646857693`"}]}],"}"}],",",RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{"0.`",",","0.`"}],"}"}],",","4.`",",","2.`"}],"}"}],",",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"1.`",",","0.`"}],"}"}],",","3.248046797678705`",",",RowBox[
+{"-","1.4715177646857693`"}]}],"}"}],",",RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{"0.`",",",RowBox[
+{"-","0.5`"}]}],"}"}],",",RowBox[{"-","0.8120116994196762`"}],",","0.5518191617571635`"}],"}"}],",",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"0.`",",","0.5`"}],"}"}],",",RowBox[{"-","0.8120116994196762`"}],",","0.5518191617571635`"}],"}"}]}],"}"}],
+StandardForm],"Output",CellID->91,CellLabel->"Out[4]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"LagrangeSolve3D","[",RowBox[{RowBox[{"x","*","y","*","z"}],",",RowBox[
+{RowBox[{"x","^","2"}],"+",RowBox[{"y","^","2"}],"+",RowBox[{"z","^","2"}],"-","1"}],",",RowBox[
+{"{",RowBox[{"x",",","y",",","z"}],"}"}]}],"]"}]],"Input",CellID->95,CellLabel->"In[5]:= "],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"0.19245008972987682`",",",RowBox[{"-","0.19245008972987698`"}]}],"}"}],
+StandardForm],"Output",CellID->96,CellLabel->"Out[5]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"Integrate","[",RowBox[{RowBox[{"x","+","y"}],",",RowBox[{"{",RowBox[
+{"x",",","3",",","4"}],"}"}],",",RowBox[{"{",RowBox[{"y",",","0",",","2"}],"}"}]}],"]"}]],
+"Input",CellID->10,CellLabel->"In[6]:= "],Cell[
+BoxData["9",StandardForm],"Output",
+CellID->11,CellLabel->"Out[6]= "]},Open]],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[
+{"Integrate","[",RowBox[{RowBox[{"12","-",RowBox[{"x","/","4"}],"-",RowBox[{"y","/","8"}]}],",",RowBox[
+{"{",RowBox[{"x",",","0",",","8"}],"}"}],",",RowBox[{"{",RowBox[{"y",",","0",",","16"}],"}"}]}],"]"}]],
+"Input",CellID->17,CellLabel->"In[7]:= "],Cell[
+BoxData["1280",StandardForm],"Output",
+CellID->18,CellLabel->"Out[7]= "]},Open]]},StyleDefinitions->"Default.nb",FrontEndVersion->"10.0 for Wolfram Cloud Platform (June 2 2014)"]

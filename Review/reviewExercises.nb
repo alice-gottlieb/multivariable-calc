@@ -1,0 +1,60 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+TextData[{"Review"," ","Exercises"}],"Title",
+CellID->1],Cell[
+BoxData[RowBox[{"Needs","[","\"BellMultiVarGottlieb`\"","]"}]],"Input",
+CellID->2,CellLabel->"In[1]:= "],Cell[
+CellGroupData[{Cell[
+TextData[{"7","."}],"Section",
+CellID->4],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"Simplify","[",RowBox[{RowBox[
+{"Norm","[",RowBox[{"Cross","[",RowBox[{RowBox[{"{",RowBox[{"1",",","0",",",RowBox[
+{RowBox[{"-","6"}],"u"}]}],"}"}],",",RowBox[{"{",RowBox[{"0",",","1",",",RowBox[{RowBox[
+{"-","4"}],"v"}]}],"}"}]}],"]"}],"]"}],",",RowBox[{"Element","[",RowBox[{RowBox[{"{",RowBox[
+{"u",",","v"}],"}"}],",","Reals"}],"]"}]}],"]"}]],"Input",CellID->5,CellLabel->"In[2]:= "],Cell[
+BoxData[
+SqrtBox[RowBox[{"1","+",RowBox[{"36"," ",SuperscriptBox["u","2"]}],"+",RowBox[{"16"," ",SuperscriptBox[
+"v","2"]}]}]],StandardForm],"Output",CellID->15,CellLabel->"Out[2]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"Integrate","[",RowBox[{RowBox[{"Integrate","[",RowBox[{RowBox[
+{RowBox[{"u","^","2"}],"*","v","*",RowBox[{"(",RowBox[{"5","-",RowBox[{"3",RowBox[
+{"u","^","2"}]}],"-",RowBox[{"2",RowBox[{"v","^","2"}]}]}],")"}],"*",RowBox[{"Sqrt","[",RowBox[
+{RowBox[{"36",RowBox[{"u","^","2"}]}],"+",RowBox[{"16",RowBox[{"v","^","2"}]}],"+","1"}],"]"}]}],",",RowBox[
+{"{",RowBox[{"v",",",RowBox[{"-",RowBox[{"Sqrt","[",RowBox[{RowBox[{"(",RowBox[{"5","-",RowBox[
+{"3",RowBox[{"u","^","2"}]}]}],")"}],"/","2"}],"]"}]}],",",RowBox[{"Sqrt","[",RowBox[
+{RowBox[{"(",RowBox[{"5","-",RowBox[{"3",RowBox[{"u","^","2"}]}]}],")"}],"/","2"}],"]"}]}],"}"}]}],"]"}],",",RowBox[
+{"{",RowBox[{"u",",",RowBox[{"-",RowBox[{"Sqrt","[",RowBox[{"5","/","3"}],"]"}]}],",",RowBox[
+{"Sqrt","[",RowBox[{"5","/","3"}],"]"}]}],"}"}]}],"]"}]],"Input",CellID->20,CellLabel->"In[3]:= "],Cell[
+BoxData[
+"0",StandardForm],"Output",CellID->21,CellLabel->"Out[3]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"96","+","72","+","48"}]],"Input",CellID->6,CellLabel->"In[1]:= "],Cell[
+BoxData[
+"216",StandardForm],"Output",CellID->7,CellLabel->"Out[1]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"D","[",RowBox[{RowBox[{RowBox[{"(",RowBox[{"z","-","3"}],")"}],"^","2"}],",","z"}],"]"}]],
+"Input",CellID->13,CellLabel->"In[3]:= "],Cell[
+BoxData[RowBox[{"2"," ",RowBox[{"(",RowBox[
+{RowBox[{"-","3"}],"+","z"}],")"}]}],StandardForm],"Output",CellID->22,CellLabel->"Out[3]= "]},
+Open]],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"Integrate","[",RowBox[{RowBox[
+{"Integrate","[",RowBox[{RowBox[{RowBox[{"(",RowBox[{"2","-",RowBox[{"2",RowBox[{"r","^","2"}]}],"+",RowBox[
+{"4",RowBox[{"r","^","2"}],"*",RowBox[{RowBox[{"(",RowBox[{"Sin","[","t","]"}],")"}],"^","2"}]}]}],")"}],"*","r"}],",",RowBox[
+{"{",RowBox[{"r",",","0",",","1"}],"}"}]}],"]"}],",",RowBox[{"{",RowBox[{"t",",","0",",",RowBox[
+{"2","\[Pi]"}]}],"}"}]}],"]"}]],"Input",CellID->8,CellLabel->"In[4]:= "],Cell[
+BoxData[
+RowBox[{"2"," ","\[Pi]"}],StandardForm],"Output",CellID->28,CellLabel->"Out[4]= "]},
+Open]],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"Integrate","[",RowBox[{RowBox[
+{RowBox[{"(",RowBox[{"Sin","[","x","]"}],")"}],"^","2"}],",","x"}],"]"}]],"Input",
+CellID->33,CellLabel->"In[3]:= "],Cell[
+BoxData[RowBox[{FractionBox["x","2"],"-",RowBox[
+{FractionBox["1","4"]," ",RowBox[{"Sin","[",RowBox[{"2"," ","x"}],"]"}]}]}],StandardForm],
+"Output",CellID->14,CellLabel->"Out[3]= "]},Open]]},Open]]},Open]]},StyleDefinitions->"Default.nb",
+FrontEndVersion->"10.0 for Wolfram Cloud Platform (June 2 2014)"]

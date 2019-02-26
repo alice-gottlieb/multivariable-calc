@@ -1,0 +1,480 @@
+Notebook[{Cell[
+TextData[{"Solve"," ","Lagrange"," ","Multipliers"}],"Text",CellID->1,
+FontSize->20,FontWeight->Bold,FontVariations->{Underline->True}],Cell[
+BoxData[{RowBox[
+{"SetAttributes","[","LagrangeSolve2D",","," ","HoldAll","]",";"}],"\n",RowBox[{"LagrangeSolve2D","[","f_",","," ","g_",","," ","{","x_",","," ","y_","}","]"," ",":="," ","\n"," ","Module","[","{","localF",",","localG",",","localX",",","localY",",","\[Lambda]",",","s",",","n",",","p","}",",","\n",StyleBox[
+RowBox[{" "," "," "}]],"localX","=","x",";","\n",StyleBox[RowBox[{"\[NonBreakingSpace]"," "," "}]],"localY","=","y",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]"," "," "}]],"localF","=","f",";","\n",StyleBox[RowBox[
+{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localG","=","g",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"s","="," ","NSolve","[","D","[","localF",",","localX","]","==","\[Lambda]","*","D","[","localG",",","localX","]","&&","D","[","localF",",","localY","]","==","\[Lambda]","*","D","[","localG",",","localY","]","&&","localG","==","0",",","{","localX",","," ","localY",",","\[Lambda]","}","]",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"n","=","{","localX",",","localY","}","/.","s",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"p","=","(",StyleBox[RowBox[
+{"l","o","calF"}]],"/.","{","localX","\[Rule]","n","[","[","#","]","]","[","[","1","]","]",",","localY","\[Rule]","n","[","[","#","]","]","[","[","2","]","]","}",")","&","/@","Range","[","Length","[","n","]","]",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"{","Max","[","p","]",",","Min","[","p","]","}","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"]"}],"\n",RowBox[{StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]]}],"\n",RowBox[{"SetAttributes","[","LagrangeSolve3D",","," ","HoldAll","]",";"}],"\n",RowBox[
+{"LagrangeSolve3D","[","f_",","," ","g_",","," ","{","x_",","," ","y_",",","z_","}","]"," ",":="," ","\n"," ","Module","[","{","localF",",","localG",",","localX",",","localY",",","localZ",",","\[Lambda]",",","s",",","n",",","p","}",",","\n",StyleBox[
+RowBox[{" "," "," "}]],StyleBox[RowBox[{"l","o","calX"}]],"=","x",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]"," "," "}]],StyleBox[RowBox[{"l","o","calY"}]],"=","y",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localZ","=","z",";","\[NonBreakingSpace]","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]"," "," "}]],StyleBox[RowBox[{"l","o","calF"}]],"=","f",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],StyleBox[RowBox[{"l","o","calG"}]],"=","g",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"s","="," ","NSolve","[","D","[","localF",",","localX","]","==","\[Lambda]","*","D","[","localG",",","localX","]","&&","D","[","localF",",","localY","]","==","\[Lambda]","*","D","[","localG",",","localY","]","&&","D","[","localF",",","localZ","]","==","\[Lambda]","*","D","[","localG",",","localZ","]","&&","localG","==","0",",","{","localX",","," ","localY",",","localZ",",","\[Lambda]","}","]",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"n","=","{","localX",",","localY",",","localZ","}","/.","s",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"p","=","(",StyleBox[RowBox[
+{"lo","c","a","lF"}]],"/.","{","localX","\[Rule]","n","[","[","#","]","]","[","[","1","]","]",",","localY","\[Rule]","n","[","[","#","]","]","[","[","2","]","]",",","localZ","\[Rule]","n","[","[","#","]","]","[","[","3","]","]","}",")","&","/@","Range","[","Length","[","n","]","]",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"{",StyleBox[RowBox[{"M","ax"}]],"[","p","]",",","Min","[","p","]","}","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"]"}]}],"Input",CellID->2,
+CellLabel->"In[74]:= "],Cell[
+"\<Examples\>","Text",CellID->6],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"LagrangeSolve2D","[",RowBox[{RowBox[{RowBox[{"4",RowBox[{"x","^","2"}]}],"-",RowBox[
+{"4","x","*","y"}],"+",RowBox[{"y","^","2"}]}],",",RowBox[{RowBox[{"x","^","2"}],"+",RowBox[
+{"y","^","2"}],"-","25"}],",",RowBox[{"{",RowBox[{"x",",","y"}],"}"}]}],"]"}]],"Input",
+CellID->3,NumberMarks->False,CellLabel->"In[78]:= "],Cell[
+BoxData[RowBox[{"{",RowBox[
+{"125.00000000000011`",",","0.`"}],"}"}],StandardForm],"Output",CellID->29,CellLabel->"Out[78]= "]},
+Open]],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"LagrangeSolve3D","[",RowBox[{RowBox[
+{"x","*","y","*","z"}],",",RowBox[{RowBox[{"x","^","2"}],"+",RowBox[{"y","^","2"}],"+",RowBox[
+{"z","^","2"}],"-","1"}],",",RowBox[{"{",RowBox[{"x",",","y",",","z"}],"}"}]}],"]"}]],
+"Input",CellID->7,CellLabel->"In[59]:= "],Cell[
+BoxData[RowBox[{"{",RowBox[{"0.19245008972987682`",",",RowBox[
+{"-","0.19245008972987698`"}]}],"}"}],StandardForm],"Output",CellID->23,CellLabel->"Out[59]= "]},
+Open]],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"LagrangeSolve3D","[",RowBox[{RowBox[
+{RowBox[{"20","x"}],"+",RowBox[{"15","y"}],"+",RowBox[{"24","z"}]}],",",RowBox[{RowBox[
+{"60","*",RowBox[{"(",RowBox[{"x","^",RowBox[{"(",RowBox[{"1","/","3"}],")"}]}],")"}],"*",RowBox[
+{"(",RowBox[{"y","^",RowBox[{"(",RowBox[{"1","/","4"}],")"}]}],")"}],"*",RowBox[{"(",RowBox[
+{"z","^",RowBox[{"(",RowBox[{"2","/","5"}],")"}]}],")"}]}],"-","9000"}],",",RowBox[
+{"{",RowBox[{"x",",","y",",","z"}],"}"}]}],"]"}]],"Input",CellID->4,CellLabel->"In[11]:= "],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"9634.433277174288`",",","9634.433277174288`"}],"}"}],StandardForm],
+"Output",CellID->39,CellLabel->"Out[11]= "]},Open]],Cell[
+TextData[{"Find"," ","and"," ","Classify"," ","Critical"," ","Points"}],
+"Text",CellID->5,FontSize->20,FontWeight->Bold,FontVariations->{Underline->True}],Cell[
+BoxData[
+{RowBox[{"SetAttributes","[","DiscrimFunc",",","HoldAll","]",";"}],"\n",RowBox[{"DiscrimFunc","[","f_",",","a_",",","b_",",","{","x_",",","y_","}","]",":=","\n","Module","[","{","localX",",","localY",",","localF",","," ","cp",",","s",",","n",",","ans",",","discrim",",","discrimFunction","}",",","\n",StyleBox[
+RowBox[{"l","o","calX"}]],"=","x",";","\n",StyleBox[RowBox[{"l","o","c","alY"}]],"=","y",";","\n",StyleBox[
+RowBox[{"l","o","c","alF"}]],"=","f",";","\n","(","D","[","localF",",","localX",",","localX","]","*","D","[","localF",",","localY",",","localY","]","-","(","D","[","localF",",","localX",",","localY","]",")","^","2",")","/.","{","localX","\[Rule]","a",",","localY","\[Rule]","b","}","\n","]"}],"\n","\n",RowBox[
+{"SetAttributes","[","CriticalPoints2D",",","HoldAll","]"}],"\n",RowBox[{"CriticalPoints2D","[","f_",",","{","x_",",","y_","}","]",":=","\n"," ","Module","[","{","localX",",","localY",",","localF",","," ","cp",",","s",",","n",",","ans",",","discrim",",","discrimFunction",",","fxx",",","point","}",",","\n","\[NonBreakingSpace]",StyleBox[
+RowBox[{"l","o","calX"}]],"=","x",";","\n","\[NonBreakingSpace]",StyleBox[RowBox[
+{"l","o","c","alY"}]],"=","y",";","\n","\[NonBreakingSpace]",StyleBox[RowBox[{"l","o","c","alF"}]],"=","f",";","\n","\[NonBreakingSpace]","s","=","NSolve","[","D","[","localF",",","localX","]","==","0","&&"," ","D","[","localF",",","localY","]","==","0",",","{","localX",",","localY","}","]",";","\n","\[NonBreakingSpace]","n","=","{","localX",",","localY","}","/.","s",";","\n","\[NonBreakingSpace]","discrim","=","(","DiscrimFunc","[","localF",",","a",",","b",",","{","localX",",","localY","}","]","/.","{","a","\[Rule]","n","[","[","#","]","]","[","[","1","]","]",",","b","\[Rule]","n","[","[","#","]","]","[","[","2","]","]","}",")","&","/@","Range","[","Length","[","n","]","]",";","\n","\[NonBreakingSpace]","fxx","=","(","D","[","localF",",","localX",",","localX","]","/.","{","localX","\[Rule]","n","[","[","#","]","]","[","[","1","]","]",",","localY","\[Rule]","n","[","[","#","]","]","[","[","2","]","]","}",")","&","/@","Range","[","Length","[","n","]","]",";","\n","\[NonBreakingSpace]","ans","=","(","{","{","localX",",","localY","}",",","discrim",",","fxx","}","/.","{","localX","\[Rule]","n","[","[","#","]","]","[","[","1","]","]",",","localY","\[Rule]","n","[","[","#","]","]","[","[","2","]","]",",","discrim","\[Rule]","discrim","[","[","#","]","]",",","fxx","\[Rule]","fxx","[","[","#","]","]","}",")","&","/@","Range","[","Length","[","n","]","]","\n","\[NonBreakingSpace]","]"}]}],
+"Input",CellID->8,CellLabel->"In[12]:= "],Cell[
+"\<Example\>","Text",CellID->9],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"\[NonBreakingSpace]",RowBox[{"CriticalPoints2D","[",RowBox[
+{RowBox[{RowBox[{"(",RowBox[{RowBox[{"x","^","2"}],"+",RowBox[{"y","^","2"}]}],")"}],"*",RowBox[
+{"E","^",RowBox[{"(",RowBox[{RowBox[{"-",RowBox[{"x","^","2"}]}],"-",RowBox[{"4","*",RowBox[
+{"y","^","2"}]}]}],")"}]}]}],",",RowBox[{"{",RowBox[{"x",",","y"}],"}"}]}],"]"}]}]],
+"Input",CellID->11,CellLabel->"In[16]:= "],Cell[
+BoxData[TemplateBox[{"Solve","incnst","\"Inconsistent or redundant transcendental equation. After reduction, the bad equation is \\!\\(\\*TagBox[RowBox[{RowBox[{\\\"-\\\", \\\"3\\\"}], \\\"-\\\", RowBox[{\\\"4\\\", \\\" \\\", RowBox[{RowBox[{\\\"InverseFunction\\\", \\\"[\\\", RowBox[{RowBox[{RowBox[{\\\"#1\\\", \\\" \\\", SuperscriptBox[\\\"\[ExponentialE]\\\", \\\"#1\\\"]}], \\\"&\\\"}], \\\",\\\", \\\"1\\\", \\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", RowBox[{FractionBox[\\\"1\\\", \\\"4\\\"], \\\" \\\", SuperscriptBox[\\\"\[ExponentialE]\\\", RowBox[{FractionBox[\\\"1\\\", \\\"4\\\"], \\\" \\\", RowBox[{\\\"(\\\", RowBox[{\\\"1\\\", \\\"+\\\", RowBox[{\\\"Times\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\"+\\\", RowBox[{\\\"Times\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}]}], \\\")\\\"}]}]], \\\" \\\", RowBox[{\\\"(\\\", RowBox[{\\\"1\\\", \\\"-\\\", RowBox[{\\\"4\\\", \\\" \\\", SuperscriptBox[\\\"x\\\", \\\"2\\\"]}], \\\"-\\\", RowBox[{\\\"4\\\", \\\" \\\", SuperscriptBox[\\\"y\\\", \\\"2\\\"]}]}], \\\")\\\"}]}], \\\"]\\\"}]}]}], Short[#1, 5] & ]\\) == 0.\"",2,16,1,27662094660630381569,$Failed},
+"MessageTemplate"],StandardForm],"Message","MSG",CellID->13],Cell[
+BoxData[TemplateBox[
+{"NSolve","ifun","\"Inverse functions are being used by \\!\\(\\*TagBox[\\\"NSolve\\\", Short[#1, 5] & ]\\), so some solutions may not be found; use Reduce for complete solution information.\"",2,16,2,27662094660630381569,$Failed},
+"MessageTemplate"],StandardForm],"Message","MSG",CellID->17],Cell[
+BoxData[TemplateBox[
+{"NSolve","svars","\"Equations may not give solutions for all \\\"solve\\\" variables.\"",2,16,3,27662094660630381569,$Failed},
+"MessageTemplate"],StandardForm],"Message","MSG",CellID->18],Cell[
+BoxData[RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{RowBox[{"-","1.`"}],",","0.`"}],"}"}],",","3.248046797678705`",",",RowBox[
+{"-","1.4715177646857693`"}]}],"}"}],",",RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{"0.`",",","0.`"}],"}"}],",","4.`",",","2.`"}],"}"}],",",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"1.`",",","0.`"}],"}"}],",","3.248046797678705`",",",RowBox[
+{"-","1.4715177646857693`"}]}],"}"}],",",RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{"0.`",",",RowBox[
+{"-","0.5`"}]}],"}"}],",",RowBox[{"-","0.8120116994196762`"}],",","0.5518191617571635`"}],"}"}],",",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"0.`",",","0.5`"}],"}"}],",",RowBox[{"-","0.8120116994196762`"}],",","0.5518191617571635`"}],"}"}]}],"}"}],
+StandardForm],"Output",CellID->19,CellLabel->"Out[16]= "]},Open]],Cell[
+BoxData[RowBox[
+{RowBox[{"f","[",RowBox[{"x_",",","y_"}],"]"}],":=",RowBox[{RowBox[{"2",RowBox[{"x","^","2"}]}],"+",RowBox[
+{"3",RowBox[{"y","^","2"}]}],"-",RowBox[{"12","x"}],"-",RowBox[{"6","y"}],"+","18"}]}]],
+"Input",CellID->20,CellLabel->"In[150]:= "],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[
+{"{",RowBox[{RowBox[{"f","[",RowBox[{RowBox[{"-","2"}],",","1"}],"]"}],",",RowBox[
+{"f","[",RowBox[{"0",",","1"}],"]"}],",",RowBox[{"f","[",RowBox[{RowBox[{"-","1"}],",","2"}],"]"}]}],"}"}]],
+"Input",CellID->21,CellLabel->"In[151]:= "],Cell[
+BoxData[RowBox[{"{",RowBox[{"47",",","15",",","32"}],"}"}],
+StandardForm],"Output",CellID->22,CellLabel->"Out[151]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"Cross","[",RowBox[{RowBox[{"{",RowBox[{"3",",","a",",","b"}],"}"}],",",RowBox[
+{"{",RowBox[{"0",",","3",",","1"}],"}"}]}],"]"}]],"Input",CellID->27,CellLabel->"In[152]:= "],Cell[
+BoxData[
+RowBox[{"{",RowBox[{RowBox[{"a","-",RowBox[{"3"," ","b"}]}],",",RowBox[{"-","3"}],",","9"}],"}"}],
+StandardForm],"Output",CellID->28,CellLabel->"Out[152]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{RowBox[{"13","^","2"}],"-","9"}]],"Input",CellID->33,CellLabel->"In[153]:= "],Cell[
+BoxData[
+"160",StandardForm],"Output",CellID->34,CellLabel->"Out[153]= "]},Open]],Cell[
+BoxData[
+RowBox[{RowBox[{"f","[",RowBox[{"a_",",","b_"}],"]"}],":=",RowBox[{RowBox[{RowBox[
+{"(",RowBox[{"a","-",RowBox[{"3","b"}]}],")"}],"^","2"}],"+",RowBox[{RowBox[{"(",RowBox[
+{"-","3"}],")"}],"^","2"}],"+",RowBox[{"9","^","2"}]}]}]],"Input",CellID->40,CellLabel->"In[154]:= "],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"{",RowBox[{RowBox[{"f","[",RowBox[{"4",",",RowBox[{"-","12"}]}],"]"}],",",RowBox[
+{"f","[",RowBox[{RowBox[{"-","4"}],",","12"}],"]"}]}],"}"}]],"Input",CellID->41,CellLabel->"In[155]:= "],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"1690",",","1690"}],"}"}],StandardForm],"Output",CellID->42,CellLabel->"Out[155]= "]},
+Open]],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"\[Sqrt]","1690"}]],"Input",CellID->47,
+CellLabel->"In[156]:= "],Cell[
+BoxData[RowBox[{"13"," ",SqrtBox["10"]}],StandardForm],
+"Output",CellID->48,CellLabel->"Out[156]= "]},Open]],Cell[
+CellGroupData[{Cell[
+BoxData[
+RowBox[{"LagrangeSolve2D","[",RowBox[{RowBox[{"f","[",RowBox[{"a",",","b"}],"]"}],",",RowBox[
+{RowBox[{"3","^","2"}],"+",RowBox[{"a","^","2"}],"+",RowBox[{"b","^","2"}],"-",RowBox[
+{"13","^","2"}]}],",",RowBox[{"{",RowBox[{"a",",","b"}],"}"}]}],"]"}]],"Input",CellID->53,
+CellLabel->"In[157]:= "],Cell[
+BoxData[RowBox[{"{",RowBox[{"1689.9999999999995`",",","90.`"}],"}"}],
+StandardForm],"Output",CellID->54,CellLabel->"Out[157]= "]},Open]],Cell[
+TextData[
+{"Double"," ","Integration"," ","over"," ","Non","-","Rectangular"," ","Regions"}],
+"Text",CellID->12,FontSize->20,FontWeight->Bold,FontVariations->{Underline->True}],Cell[
+BoxData[
+{RowBox[{"SetAttributes","[","DoubleIntegrate",","," ","HoldAll","]",";"}],"\n",RowBox[
+{"DoubleIntegrate","[","f_",","," ","{","a_",","," ","aLower_",",","aUpper_","}",",","{","b_",",","bLower_",",","bUpper_","}","]"," ",":="," ","\n"," ","Module","[","{","localF",",","localA",",","localALower",",","localAUpper",",","localB",",","localBLower",",","localBUpper",",","int1",",","int2","}",",","\[NonBreakingSpace]","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]"," "," "}]],StyleBox[RowBox[{"l","o","calF"}]],"=","f",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localA","=","a",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localALower","=","aLower",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localAUpper","=","aUpper",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localB","=","b",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localBLower","=","bLower",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localBUpper","=","bUpper",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"int1","=","Integrate","[","localF",",","localA","]",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"int1","=","(","int1","/.","localA","\[Rule]","localAUpper",")","-","(","int1","/.","localA","\[Rule]","localALower",")",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"int2","=","Integrate","[","int1",",","localB","]",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"(","int2","/.","localB","\[Rule]","localBUpper",")","-","(","int2","/.","localB","\[Rule]","localBLower",")","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"]"}]}],"Input",CellID->14,
+CellLabel->"In[1]:= "],Cell[
+"\<Examples\>","Text",CellID->155],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"DoubleIntegrate","[",RowBox[{RowBox[{RowBox[{"3","x"}],"-",RowBox[
+{"2","y"}]}],",",RowBox[{"{",RowBox[{"x",",","0",",","y"}],"}"}],",",RowBox[{"{",RowBox[
+{"y",",","1",",","2"}],"}"}]}],"]"}]],"Input",CellID->35,CellLabel->"In[170]:= "],Cell[
+BoxData[
+RowBox[{"-",FractionBox["7","6"]}],StandardForm],"Output",CellID->150,CellLabel->"Out[170]= "]},
+Open]],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"DoubleIntegrate","[",RowBox[{"1",",",RowBox[
+{"{",RowBox[{"y",",",RowBox[{RowBox[{"x","^","2"}],"+","3"}],",",RowBox[{"5","-","x"}]}],"}"}],",",RowBox[
+{"{",RowBox[{"x",",",RowBox[{"-","2"}],",","1"}],"}"}]}],"]"}]],"Input",CellID->156,
+CellLabel->"In[171]:= "],Cell[
+BoxData[FractionBox["9","2"],StandardForm],"Output",
+CellID->157,CellLabel->"Out[171]= "]},Open]],Cell[
+TextData[{"Surface"," ","Area"," ","of"," ","Parametric"," ","Surfaces"}],
+"Text",CellID->15,FontSize->20,FontWeight->Bold,FontVariations->{Underline->True}],Cell[
+BoxData[
+{RowBox[{"SetAttributes","[","ParametricSurfaceArea",","," ","HoldAll","]",";"}],"\n",RowBox[
+{"ParametricSurfaceArea","[","{","x_",",","y_",",","z_","}",","," ","{","u_",","," ","uLower_",",","uUpper_","}",",","{","v_",",","vLower_",",","vUpper_","}","]"," ",":="," ","\n"," ","Module","[","{","localX",",","localY",",","localZ",",","localU",",","localULower",",","localUUpper",",","localV",",","localVLower",",","localVUpper",",","int1",",","int2","}",",","\[NonBreakingSpace]","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]"," "," "}]],"localF","=","f",";","\n",StyleBox[RowBox[
+{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localA","=","a",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localALower","=","aLower",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localAUpper","=","aUpper",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localB","=","b",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localBLower","=","bLower",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localBUpper","=","bUpper",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"]"}]}],"Input",CellID->16],Cell[
+CellGroupData[
+{Cell[
+"\<Jacobian\>","Section",CellID->24],Cell[
+CellGroupData[{Cell[
+BoxData[{RowBox[
+{"SetAttributes","[","J",","," ","HoldAll","]",";"}],"\n",RowBox[{"J","[","{","x_",",","y_","}",",","{","u_",",","v_","}","]",":=","\n","Module","[","{","localX",",","localY",",","localU",",","localV","}",",","\n","localX","=","x",";","\n","localY","=","y",";","\n","localU","=","u",";","\n","localV","=","v",";","\n","Simplify","[","D","[","x",",","u","]","*","D","[","y",",","v","]","-","D","[","y",",","u","]","*","D","[","x",",","v","]","]","\n","]"}],"\n",RowBox[
+{"J","[","{","(","1","/","2",")","*","(","u","+","v",")",",","(","1","/","2",")","*","(","u","-","v",")","}",",","{","u",",","v","}","]"}]}],
+"Input",CellID->25,CellLabel->"In[9]:= "],Cell[
+BoxData[RowBox[{"-",FractionBox["1",
+"2"]}],StandardForm],"Output",CellID->50,CellLabel->"Out[11]= "]},Open]],Cell[
+"\<Example\>",
+"Text",CellID->36],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"J","[",RowBox[{RowBox[
+{"{",RowBox[{RowBox[{"Sqrt","[",RowBox[{"v","/","u"}],"]"}],",",RowBox[{"Sqrt","[",RowBox[
+{"u","*","v"}],"]"}]}],"}"}],",",RowBox[{"{",RowBox[{"u",",","v"}],"}"}]}],"]"}]],
+"Input",CellID->37,CellLabel->"In[12]:= "],Cell[
+BoxData[RowBox[{"-",FractionBox[
+SqrtBox[FractionBox["v","u"]],RowBox[{"2"," ",SqrtBox[RowBox[{"u"," ","v"}]]}]]}],
+StandardForm],"Output",CellID->52,CellLabel->"Out[12]= "]},Open]]},Open]],Cell[
+CellGroupData[
+{Cell[
+TextData[{"Jacobian"," ","Unsolved"}],"Section",CellID->46],Cell[
+CellGroupData[
+{Cell[
+BoxData[{RowBox[{"SetAttributes","[","J2",","," ","HoldAll","]",";"}],"\n",RowBox[
+{"J2","[","{","u1_",",","v1_","}",",","{","x_",",","y_","}","]",":=","\n","Module","[","{","localX",",","localY",",","localU",",","localV",",","solvedU",",","solvedV",",","s",",","n",",","u",",","v","}",",","\n","localX","=","x",";","\n","localY","=","y",";","\n","localU","=","u1",";","\n","localV","=","v1",";","\n","s","=","Solve","[","solvedU","==","localU","&&","solvedV","==","localV",",","{","localX",",","localY","}","]",";","\n","n","=","{","localX",",","localY","}","/.","s",";","\n","D","[","n","[","[","1","]","]","[","[","1","]","]",",","solvedU","]","*","D","[","n","[","[","1","]","]","[","[","2","]","]",",","solvedV","]","-","D","[","n","[","[","1","]","]","[","[","2","]","]",",","solvedU","]","*","D","[","n","[","[","1","]","]","[","[","1","]","]",",","solvedV","]","/.","{","solvedV","\[Rule]","v",",","solvedU","\[Rule]","u","}","\n","]"}],"\n",RowBox[
+{"J2","[","{","2","x","-","5","y",",","x","+","2","y","}",",","{","x",",","y","}","]"}]}],
+"Input",CellID->49,CellLabel->"In[43]:= "],Cell[
+BoxData[FractionBox["1","9"],StandardForm],
+"Output",CellID->182,CellLabel->"Out[45]= "]},Open]],Cell[
+"\<Example\>","Text",CellID->171],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"J","[",RowBox[{RowBox[{"{",RowBox[{RowBox[{"Sqrt","[",RowBox[
+{"v","/","u"}],"]"}],",",RowBox[{"Sqrt","[",RowBox[{"u","*","v"}],"]"}]}],"}"}],",",RowBox[
+{"{",RowBox[{"u",",","v"}],"}"}]}],"]"}]],"Input",CellID->170,CellLabel->"In[41]:= "],Cell[
+BoxData[
+RowBox[{"-",FractionBox[SqrtBox[FractionBox["v","u"]],RowBox[{"2"," ",SqrtBox[RowBox[
+{"u"," ","v"}]]}]]}],StandardForm],"Output",CellID->172,CellLabel->"Out[41]= "]},
+Open]],Cell[
+CellGroupData[{Cell[
+BoxData[{RowBox[{StyleBox[RowBox[{"(*"," ","Comment"," ","*)"}]]}],"\n",RowBox[
+{"J2","[","{","y","/","x",",","x","*","y","}",",","{","x",",","y","}","]"}]}],"Input",
+CellID->169,CellLabel->"In[6]:= "],Cell[
+BoxData[RowBox[{"-",FractionBox["1",RowBox[
+{"2"," ","BellMultiVarGottlieb`Private`u$38955"}]]}],StandardForm],"Output",CellID->26,
+CellLabel->"Out[6]= "]},Open]]},Open]],Cell[
+CellGroupData[{Cell[
+TextData[{"Jacobian"," ","3D"}],
+"Section",CellID->30],Cell[
+CellGroupData[{Cell[
+BoxData[{RowBox[{"SetAttributes","[","J3",","," ","HoldAll","]",";"}],"\n",RowBox[
+{"J3","[","{","x_",",","y_",",","z_","}",",","{","u_",",","v_",",","w_","}","]",":=","\n","Module","[","{","localX",",","localY",",","localZ",",","localU",",","localV",",","localW","}",",","\n","localX","=","x",";","\n","localY","=","y",";","\n","localZ","=","z",";","\n","localU","=","u",";","\n","localV","=","v",";","\n","localW","=","w",";","\n","Simplify","[","Det","[","{","{","D","[","localX",",","localU","]",",","D","[","localX",",","localV","]",",","D","[","localX",",","localW","]","}",",","{","D","[","localY",",","localU","]",",","D","[","localY",",","localV","]",",","D","[","localY",",","localW","]","}",",","{","D","[","localZ",",","localU","]",",","D","[","localZ",",","localV","]",",","D","[","localZ",",","localW","]","}","}","]","]","\n","]"}],"\n",RowBox[
+{"J3","[","{","3","u","+","v",",","u","-","2","w",",","v","+","w","}",",","{","u",",","v",",","w","}","]"}]}],
+"Input",CellID->32,CellLabel->"In[10]:= "],Cell[
+BoxData["5",StandardForm],"Output",
+CellID->60,CellLabel->"Out[12]= "]},Open]]},Open]],Cell[
+CellGroupData[{Cell[
+TextData[
+{"Jacobian"," ","3D"," ","Unsolved"}],"Section",CellID->31],Cell[
+CellGroupData[{Cell[
+BoxData[
+{RowBox[{"SetAttributes","[","J3U",","," ","HoldAll","]",";"}],"\n",RowBox[{"J3U","[","{","u1_",",","v1_",",","w1_","}",",","{","x_",",","y_",",","z_","}","]",":=","\n","Module","[","{","localX",",","localY",",","localZ",",","localU",",","localV",",","localW",",","solvedU",",","solvedV",",","solvedW",",","s",",","n",",","u",",","v","}",",","\n","localX","=","x",";","\n","localY","=","y",";","\n","localZ","=","z",";","\n","localU","=","u1",";","\n","localV","=","v1",";","\n","localW","=","w1",";","\n","s","=","Solve","[","solvedU","==","localU","&&","solvedV","==","localV","&&","solvedW","==","localW",",","{","localX",",","localY",",","localZ","}","]",";","\n","n","=","{","localX",",","localY",",","localZ","}","/.","s",";","\n","Simplify","[","Det","[","{","{","D","[","n","[","[","1","]","]","[","[","1","]","]",",","localU","]",",","D","[","n","[","[","1","]","]","[","[","1","]","]",",","localV","]",",","D","[","n","[","[","1","]","]","[","[","1","]","]",",","localW","]","}",",","{","D","[","n","[","[","1","]","]","[","[","2","]","]",",","localU","]",",","D","[","n","[","[","1","]","]","[","[","2","]","]",",","localV","]",",","D","[","n","[","[","1","]","]","[","[","2","]","]",",","localW","]","}",",","{","D","[","n","[","[","1","]","]","[","[","3","]","]",",","localU","]",",","D","[","n","[","[","1","]","]","[","[","3","]","]",",","localV","]",",","D","[","n","[","[","1","]","]","[","[","3","]","]",",","localW","]","}","}","]","/.","{","solvedV","\[Rule]","v",",","solvedU","\[Rule]","u",",","solvedW","\[Rule]","w","}","]","\n","]"}],"\n",RowBox[
+{"J3U","[","{","x","/","a",",","y","/","b",",","z","/","c","}",",","{","x",",","y",",","z","}","]"}]}],
+"Input",CellID->59,CellLabel->"In[20]:= "],Cell[
+BoxData[TemplateBox[{"General","ivar","\"\\!\\(\\*TagBox[FractionBox[\\\"x\\\", \\\"a\\\"], Short[#1, 5] & ]\\) is not a valid variable.\"",2,22,18,27677943998991252654,$Failed},
+"MessageTemplate"],StandardForm],"Message","MSG",CellID->68],Cell[
+BoxData[TemplateBox[
+{"General","ivar","\"\\!\\(\\*TagBox[FractionBox[\\\"y\\\", \\\"b\\\"], Short[#1, 5] & ]\\) is not a valid variable.\"",2,22,19,27677943998991252654,$Failed},
+"MessageTemplate"],StandardForm],"Message","MSG",CellID->70],Cell[
+BoxData[TemplateBox[
+{"General","ivar","\"\\!\\(\\*TagBox[FractionBox[\\\"z\\\", \\\"c\\\"], Short[#1, 5] & ]\\) is not a valid variable.\"",2,22,20,27677943998991252654,$Failed},
+"MessageTemplate"],StandardForm],"Message","MSG",CellID->71],Cell[
+BoxData[TemplateBox[
+{"General","stop","\"Further output of \\!\\(\\*TagBox[StyleBox[RowBox[{\\\"General\\\", \\\"::\\\", \\\"ivar\\\"}], \\\"MessageName\\\"], Short[#1, 5] & ]\\) will be suppressed during this calculation.\"",2,22,21,27677943998991252654,$Failed},
+"MessageTemplate"],StandardForm],"Message","MSG",CellID->72],Cell[
+BoxData[RowBox[
+{RowBox[{RowBox[{SubscriptBox["\[PartialD]",RowBox[{FractionBox["z","c"]}]],RowBox[
+{"(",RowBox[{"a"," ","u$30298"}],")"}]}]," ",RowBox[{"(",RowBox[{RowBox[{RowBox[{"-",RowBox[
+{SubscriptBox["\[PartialD]",RowBox[{FractionBox["y","b"]}]],RowBox[{"(",RowBox[{"b"," ","v$30298"}],")"}]}]}]," ",RowBox[
+{SubscriptBox["\[PartialD]",RowBox[{FractionBox["x","a"]}]],RowBox[{"(",RowBox[{"c"," ","w"}],")"}]}]}],"+",RowBox[
+{RowBox[{SubscriptBox["\[PartialD]",RowBox[{FractionBox["x","a"]}]],RowBox[{"(",RowBox[
+{"b"," ","v$30298"}],")"}]}]," ",RowBox[{SubscriptBox["\[PartialD]",RowBox[{FractionBox[
+"y","b"]}]],RowBox[{"(",RowBox[{"c"," ","w"}],")"}]}]}]}],")"}]}],"+",RowBox[{RowBox[
+{SubscriptBox["\[PartialD]",RowBox[{FractionBox["y","b"]}]],RowBox[{"(",RowBox[{"a"," ","u$30298"}],")"}]}]," ",RowBox[
+{"(",RowBox[{RowBox[{RowBox[{SubscriptBox["\[PartialD]",RowBox[{FractionBox["z","c"]}]],RowBox[
+{"(",RowBox[{"b"," ","v$30298"}],")"}]}]," ",RowBox[{SubscriptBox["\[PartialD]",RowBox[
+{FractionBox["x","a"]}]],RowBox[{"(",RowBox[{"c"," ","w"}],")"}]}]}],"-",RowBox[{RowBox[
+{SubscriptBox["\[PartialD]",RowBox[{FractionBox["x","a"]}]],RowBox[{"(",RowBox[{"b"," ","v$30298"}],")"}]}]," ",RowBox[
+{SubscriptBox["\[PartialD]",RowBox[{FractionBox["z","c"]}]],RowBox[{"(",RowBox[{"c"," ","w"}],")"}]}]}]}],")"}]}],"+",RowBox[
+{RowBox[{SubscriptBox["\[PartialD]",RowBox[{FractionBox["x","a"]}]],RowBox[{"(",RowBox[
+{"a"," ","u$30298"}],")"}]}]," ",RowBox[{"(",RowBox[{RowBox[{RowBox[{"-",RowBox[{SubscriptBox[
+"\[PartialD]",RowBox[{FractionBox["z","c"]}]],RowBox[{"(",RowBox[{"b"," ","v$30298"}],")"}]}]}]," ",RowBox[
+{SubscriptBox["\[PartialD]",RowBox[{FractionBox["y","b"]}]],RowBox[{"(",RowBox[{"c"," ","w"}],")"}]}]}],"+",RowBox[
+{RowBox[{SubscriptBox["\[PartialD]",RowBox[{FractionBox["y","b"]}]],RowBox[{"(",RowBox[
+{"b"," ","v$30298"}],")"}]}]," ",RowBox[{SubscriptBox["\[PartialD]",RowBox[{FractionBox[
+"z","c"]}]],RowBox[{"(",RowBox[{"c"," ","w"}],")"}]}]}]}],")"}]}]}],StandardForm],
+"Output",CellID->73,CellLabel->"Out[22]= "]},Open]],Cell[
+BoxData[""],"Input",CellID->38]},
+Open]],Cell[
+CellGroupData[{Cell[
+TextData[{"Vector"," ","Field"," ","Line"," ","Integral"," ","2","D"}],
+"Section",CellID->43],Cell[
+CellGroupData[{Cell[
+BoxData[{RowBox[{"SetAttributes","[","VFLineIntegrate2D",","," ","HoldAll","]",";"}],"\n",RowBox[
+{"VFLineIntegrate2D","[","{","Fx_",",","Fy_","}",",","{","rx_",",","ry_","}",",","{","t_",",","tlower_",",","tupper_","}","]",":=","\n","Module","[","{","lFx",",","lFy",",","lrx",",","lry",",","lt",",","ltlower",",","ltupper",",","r",",","F",",","dr","}",",","\n",StyleBox[
+RowBox[{"(*Create"," ","local"," ","copies,"," ","possibly*)"}]],"\n","lFx","=","Fx",";","\n","lFy","=","Fy",";","\n","lrx","=","rx",";","\n","lry","=","ry",";","\n","lt","=","t",";","\n","ltlower","=","tlower",";","\n","ltupper","=","tupper",";","\n",StyleBox[
+RowBox[{"(*Create"," ","vectors*)"}]],"\n","F","=","{","lFx",",","lFy","}",";","\n","r","=","{","lrx",",","lry","}",";","\n","dr","=","D","[","r",",","lt","]",";","\n","(*Integrate*)","\n","Integrate","[","Dot","[","F",",","dr","]",",","{","lt",",","ltlower",",","ltupper","}","]","\n","]"}],"\n",RowBox[
+{"VFLineIntegrate2D","[","{","Cos","[","t","]",",","Sin","[","t","]","}",",","{","t",",","1","}",",","{","t",",","-","2","\[Pi]",",","2","\[Pi]","}","]"}]}],
+"Input",CellID->44,CellLabel->"In[11]:= "],Cell[
+BoxData["0",StandardForm],"Output",
+CellID->45,CellLabel->"Out[13]= "]},Open]],Cell[
+"\<Example\>","Text",CellID->95],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"VFLineIntegrate2D","[",RowBox[{RowBox[{"{",RowBox[{RowBox[
+{"E","^",RowBox[{"(","t",")"}]}],",","4"}],"}"}],",",RowBox[{"{",RowBox[{RowBox[{"E","^","t"}],",",RowBox[
+{"E","^",RowBox[{"(",RowBox[{"-","t"}],")"}]}]}],"}"}],",",RowBox[{"{",RowBox[{"t",",","0",",","1"}],"}"}]}],"]"}]],
+"Input",CellID->51,CellLabel->"In[34]:= "],Cell[
+BoxData[FractionBox[RowBox[{"8","-",RowBox[
+{"9"," ","\[ExponentialE]"}],"+",SuperscriptBox["\[ExponentialE]","3"]}],RowBox[{"2"," ","\[ExponentialE]"}]],
+StandardForm],"Output",CellID->134,CellLabel->"Out[34]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"Integrate","[",RowBox[{RowBox[{"Dot","[",RowBox[{RowBox[{"{",RowBox[
+{RowBox[{"E","^","t"}],",","4"}],"}"}],",",RowBox[{"{",RowBox[{RowBox[{"E","^","t"}],",",RowBox[
+{"-",RowBox[{"E","^",RowBox[{"(",RowBox[{"-","t"}],")"}]}]}]}],"}"}]}],"]"}],",",RowBox[
+{"{",RowBox[{"t",",","0",",","1"}],"}"}]}],"]"}]],"Input",CellID->121,CellLabel->"In[30]:= "],Cell[
+BoxData[
+FractionBox[RowBox[{"8","-",RowBox[{"9"," ","\[ExponentialE]"}],"+",SuperscriptBox[
+"\[ExponentialE]","3"]}],RowBox[{"2"," ","\[ExponentialE]"}]],StandardForm],"Output",
+CellID->124,CellLabel->"Out[30]= "]},Open]],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[
+{"VFLineIntegrate2D","[",RowBox[{RowBox[{"{",RowBox[{"t",",",RowBox[{"2","-","t"}]}],"}"}],",",RowBox[
+{"{",RowBox[{"t",",",RowBox[{"2","-","t"}]}],"}"}],",",RowBox[{"{",RowBox[{"t",",","1",",","2"}],"}"}]}],"]"}]],
+"Input",CellID->58,CellLabel->"In[15]:= "],Cell[
+BoxData["1",StandardForm],"Output",
+CellID->66,CellLabel->"Out[15]= "]},Open]]},Open]],Cell[
+CellGroupData[{Cell[
+TextData[
+{"Vector"," ","Field"," ","Line"," ","Integral"," ","3","D"}],"Section",CellID->140],Cell[
+BoxData[
+{RowBox[{"SetAttributes","[","VFLineIntegrate3D",","," ","HoldAll","]",";"}],"\n",RowBox[
+{"VFLineIntegrate3D","[","{","Fx_",",","Fy_",",","Fz_","}",",","{","rx_",",","ry_",",","rz_","}",",","{","t_",",","tlower_",",","tupper_","}","]",":=","\n","Module","[","{","lFx",",","lFy",",","lFz",",","lrx",",","lry",",","lrz",",","lt",",","ltlower",",","ltupper",",","r",",","F",",","dr","}",",","\n",StyleBox[
+RowBox[{"(*Create"," ","local"," ","copies,"," ","possibly*)"}]],"\n","lFx","=","Fx",";","\n","lFy","=","Fy",";","\n","lFz","=","Fz",";","\n","lrx","=","rx",";","\n","lry","=","ry",";","\n","lrz","=","rz",";","\n","lt","=","t",";","\n","ltlower","=","tlower",";","\n","ltupper","=","tupper",";","\n",StyleBox[
+RowBox[{"(*Create"," ","vectors*)"}]],"\n","F","=","{","lFx",",","lFy",",","lFz","}",";","\n","r","=","{","lrx",",","lry",",","lrz","}",";","\n","dr","=","D","[","r",",","lt","]",";","\n","(*Integrate*)","\n","Integrate","[","Dot","[","F",",","dr","]",",","{","lt",",","ltlower",",","ltupper","}","]","\n","]"}]}],
+"Input",CellID->141,CellLabel->"In[38]:= "]},Open]],Cell[
+CellGroupData[{Cell[
+TextData[
+{"Green's"," ","Theorem"}],"Section",CellID->55],Cell[
+CellGroupData[{Cell[
+BoxData[
+{RowBox[{"SetAttributes","[","GreenInt",","," ","HoldAll","]",";"}],"\n",RowBox[{"GreenInt","[","{","Fx_",",","Fy_","}",",","{","xb_",",","xlower_",",","xupper_","}",",","{","yb_",",","ylower_",",","yupper_","}",",","x_",",","y_","]",":=","\n","Module","[","{","lFx",",","lFy",",","lxb",",","lxlower",",","lxupper",",","lyb",",","lylower",",","lyupper",",","integrand",",","lx",",","ly","}",",","\n",StyleBox[
+RowBox[{"(*Create"," ","local"," ","copies","*)"}]],"\n","lFx","=","Fx",";","\n","lFy","=","Fy",";","\n","lxb","=","xb",";","\n","lxlower","=","xlower",";","\n","lxupper","=","xupper",";","\n","lyb","=","yb",";","\n","lylower","=","ylower",";","\n","lyupper","=","yupper",";","\n","lx","=","x",";","\n","ly","=","y",";","\n",StyleBox[
+RowBox[{"(*Create"," ","integrand","*)"}]],"\n","integrand"," ","="," ","D","[","lFy",",","lx","]","-","D","[","lFx",",","ly","]",";","\n","(*Integrate*)","\n","Integrate","[","Integrate","[","integrand",",","{","lxb",",","lxlower",",","lxupper","}","]",",","{","lyb",",","lylower",",","lyupper","}","]","\n","]"}],"\n",RowBox[
+{"GreenInt","[","{","3","x","*","y",",","2","x","*","y","}",",","{","y",",","1",",","2","}",",","{","x",",","-","2",",","4","}",",","x",",","y","]"}]}],
+"Input",CellID->56,CellLabel->"In[31]:= "],Cell[
+BoxData["0",StandardForm],"Output",
+CellID->100,CellLabel->"Out[33]= "]},Open]],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[
+{"GreenInt","[",RowBox[{RowBox[{"{",RowBox[{RowBox[{"y","^","2"}],",",RowBox[{"x","^","2"}]}],"}"}],",",RowBox[
+{"{",RowBox[{"x",",","0",",","1"}],"}"}],",",RowBox[{"{",RowBox[{"y",",","0",",","1"}],"}"}],",","x",",","y"}],"]"}]],
+"Input",CellID->67,CellLabel->"In[19]:= "],Cell[
+BoxData["0",StandardForm],"Output",
+CellID->69,CellLabel->"Out[19]= "]},Open]],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[
+{"GreenInt","[",RowBox[{RowBox[{"{",RowBox[{RowBox[{"Log","[",RowBox[{"1","+","y"}],"]"}],",",RowBox[
+{RowBox[{"-",RowBox[{"(",RowBox[{"x","*","y"}],")"}]}],"/",RowBox[{"(",RowBox[{"1","+","y"}],")"}]}]}],"}"}],",",RowBox[
+{"{",RowBox[{"y",",","0",",",RowBox[{RowBox[{RowBox[{"-","2"}],"x"}],"+","4"}]}],"}"}],",",RowBox[
+{"{",RowBox[{"x",",","0",",","2"}],"}"}],",","x",",","y"}],"]"}]],"Input",CellID->77,
+CellLabel->"In[34]:= "],Cell[
+BoxData[RowBox[{"-","4"}],StandardForm],"Output",CellID->105,
+CellLabel->"Out[34]= "]},Open]]},Open]],Cell[
+CellGroupData[{Cell[
+TextData[{"Surface"," ","Integral"}],
+"Section",CellID->57],Cell[
+CellGroupData[{Cell[
+BoxData[{RowBox[{"SetAttributes","[","SurfaceIntegrate",","," ","HoldAll","]",";"}],"\n",RowBox[
+{"SurfaceIntegrate","[","F_",",","{","rx_",",","ry_",",","rz_","}",",","{","x_",",","y_",",","z_","}",",","{","u_",",","ulower_",",","uupper_","}",",","{","v_",",","vlower_",",","vupper_","}","]",":=","\n","Module","[","{","lF",",","lrx",",","lry",",","lrz",",","lx",",","ly",",","lz",",","lu",",","lulower",",","luupper",",","lv",",","lvlower",",","lvupper",",","r",",","drdu",",","drdv",",","newF","}",",","\n",StyleBox[
+RowBox[{"(*Create"," ","local"," ","copies,"," ","possibly*)"}]],"\n","lF","=","F",";","\n","lrx","=","rx",";","\n","lry","=","ry",";","\n","lrz","=","rz",";","\n","lx","=","x",";","\n","ly","=","y",";","\n","lz","=","z",";","\n","lu","=","u",";","\n","lulower","=","ulower",";","\n","luupper","=","uupper",";","\n","lv","=","v",";","\n","lvlower","=","vlower",";","\n","lvupper","=","vupper",";","\n",StyleBox[
+RowBox[{"(*Create"," ","vectors*)"}]],"\n","r","=","{","lrx",",","lry",",","lrz","}",";","\n","drdu","=","D","[","r",",","lu","]",";","\n","drdv","=","D","[","r",",","lv","]",";","\n",StyleBox[
+RowBox[{"(*Create"," ","f(x(u,v),y(u,v),z(u,v))*)"}]],"\n","newF","=","Simplify","[","lF","/.","{","lx","\[Rule]","lrx",",","ly","\[Rule]","lry",",","lz","\[Rule]","lrz","}",",","Element","[","{","lrx",",","lry",",","lrz","}",",","Reals","]","]",";","\n","(*Integrate*)","\n","Simplify","[","Integrate","[","Integrate","[","Simplify","[","newF","*","Norm","[","Cross","[","drdu",",","drdv","]","]",",","Element","[","{","drdu",",","drdv",",","lu",",","lulower",",","luupper",",","lv",",","lvlower",",","lvupper","}",",","Reals","]","]",",","{","lu",",","lulower",",","luupper","}","]",",","{","lv",",","lvlower",",","lvupper","}","]",",","Element","[","{","drdu",",","drdv",",","lu",",","lulower",",","luupper",",","lv",",","lvlower",",","lvupper","}",",","Reals","]","]","\n","]"}],"\n",RowBox[
+{"SurfaceIntegrate","[","1",",","{","2","*","Sin","[","\[Phi]","]","*","Cos","[","\[Theta]","]",",","2","*","Sin","[","\[Phi]","]","*","Sin","[","\[Theta]","]",",","2","*","Cos","[","\[Phi]","]","}",",","{","x",",","y",",","z","}",",","{","\[Phi]",",","0",",","\[Pi]","}",",","{","\[Theta]",",","0",",","2","\[Pi]","}","]"}]}],
+"Input",CellID->61,CellLabel->"In[7]:= "],Cell[
+BoxData[RowBox[{"16"," ","\[Pi]"}],
+StandardForm],"Output",CellID->75,CellLabel->"Out[9]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"N","[","%11","]"}]],"Input",CellID->79,CellLabel->"In[12]:= "],Cell[
+BoxData[
+TemplateBox[{"NIntegrate","slwcon","\"Numerical integration converging too slowly; suspect one of the following: singularity, value of the integration is 0, highly oscillatory integrand, or WorkingPrecision too small.\"",2,12,3,30020956072160286733,$Failed},
+"MessageTemplate"],StandardForm],"Message","MSG",CellID->85],Cell[
+BoxData[TemplateBox[
+{"NIntegrate","ncvb","\"NIntegrate failed to converge to prescribed accuracy after \\!\\(\\*TagBox[\\\"9\\\", Short[#1, 5] & ]\\) recursive bisections in \\!\\(\\*TagBox[\\\"\[Theta]\\\", Short[#1, 5] & ]\\) near \\!\\(\\*TagBox[RowBox[{\\\"{\\\", \\\"\[Theta]\\\", \\\"}\\\"}], Short[#1, 5] & ]\\) = \\!\\(\\*TagBox[RowBox[{\\\"{\\\", \\\"5.436330261259269`\\\", \\\"}\\\"}], Short[#1, 5] & ]\\). NIntegrate obtained \\!\\(\\*TagBox[\\\"100.21070625045328`\\\", Short[#1, 5] & ]\\) and \\!\\(\\*TagBox[\\\"10.227827119523047`\\\", Short[#1, 5] & ]\\) for the integral and error estimates.\"",2,12,4,30020956072160286733,$Failed},
+"MessageTemplate"],StandardForm],"Message","MSG",CellID->87],Cell[
+BoxData["100.21070625045328`",
+StandardForm],"Output",CellID->88,CellLabel->"Out[12]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"SurfaceIntegrate","[",RowBox[{RowBox[{"x","*","z"}],",",RowBox[
+{"{",RowBox[{"u",",","v",",",RowBox[{"1","-","u","-","v"}]}],"}"}],",",RowBox[{"{",RowBox[
+{"x",",","y",",","z"}],"}"}],",",RowBox[{"{",RowBox[{"v",",","0",",",RowBox[{"1","-","u"}]}],"}"}],",",RowBox[
+{"{",RowBox[{"u",",","0",",","1"}],"}"}]}],"]"}]],"Input",CellID->98,CellLabel->"In[10]:= "],Cell[
+BoxData[
+FractionBox["1",RowBox[{"8"," ",SqrtBox["3"]}]],StandardForm],"Output",CellID->81,
+CellLabel->"Out[10]= "]},Open]]},Open]],Cell[
+CellGroupData[{Cell[
+TextData[{"Surface"," ","Integral"," ","Cross"," ","Product"," ","Entry"}],
+"Section",CellID->117],Cell[
+CellGroupData[{Cell[
+BoxData[{RowBox[{"SetAttributes","[","SurfaceIntegrateCP",","," ","HoldAll","]",";"}],"\n",RowBox[
+{"SurfaceIntegrateCP","[","F_",",","cp_",",","{","rx_",",","ry_",",","rz_","}",",","{","x_",",","y_",",","z_","}",",","{","u_",",","ulower_",",","uupper_","}",",","{","v_",",","vlower_",",","vupper_","}","]",":=","\n","Module","[","{","lF",",","lcp",",","lrx",",","lry",",","lrz",",","lx",",","ly",",","lz",",","lu",",","lulower",",","luupper",",","lv",",","lvlower",",","lvupper",",","r",",","drdu",",","drdv",",","newF","}",",","\n",StyleBox[
+RowBox[{"(*Create"," ","local"," ","copies,"," ","possibly*)"}]],"\n","lF","=","F",";","\n","lcp","=","cp",";","\n","lrx","=","rx",";","\n","lry","=","ry",";","\n","lrz","=","rz",";","\n","lx","=","x",";","\n","ly","=","y",";","\n","lz","=","z",";","\n","lu","=","u",";","\n","lulower","=","ulower",";","\n","luupper","=","uupper",";","\n","lv","=","v",";","\n","lvlower","=","vlower",";","\n","lvupper","=","vupper",";","\n",StyleBox[
+RowBox[{"(*Create"," ","f(x(u,v),y(u,v),z(u,v))*)"}]],"\n","newF","=","Simplify","[","lF","/.","{","lx","\[Rule]","lrx",",","ly","\[Rule]","lry",",","lz","\[Rule]","lrz","}","]",";","\n","(*Integrate*)","\n","Integrate","[","Integrate","[","Simplify","[","newF","*","lcp","]",",","{","lu",",","lulower",",","luupper","}","]",",","{","lv",",","lvlower",",","lvupper","}","]","\n","]"}],"\n",RowBox[
+{"SurfaceIntegrateCP","[","x","^","2",",","Sin","[","\[Phi]","]",",","{","1","*","Sin","[","\[Phi]","]","*","Cos","[","\[Theta]","]",",","Sin","[","\[Phi]","]","*","Sin","[","\[Theta]","]",",","Cos","[","\[Phi]","]","}",",","{","x",",","y",",","z","}",",","{","\[Phi]",",","0",",","\[Pi]","}",",","{","\[Theta]",",","0",",","2","\[Pi]","}","]"}]}],
+"Input",NumberMarks->False,CellLabel->"In[24]:= "],Cell[
+BoxData[FractionBox[RowBox[
+{"4"," ","\[Pi]"}],"3"],StandardForm],"Output",CellID->142,CellLabel->"Out[26]= "]},
+Open]],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"Norm","[",RowBox[{"Cross","[",RowBox[
+{RowBox[{"D","[",RowBox[{RowBox[{"{",RowBox[{RowBox[{"1","*",RowBox[{"Sin","[","\[Phi]","]"}],"*",RowBox[
+{"Cos","[","\[Theta]","]"}]}],",",RowBox[{RowBox[{"Sin","[","\[Phi]","]"}],"*",RowBox[
+{"Sin","[","\[Theta]","]"}]}],",",RowBox[{"Cos","[","\[Phi]","]"}]}],"}"}],",","\[Phi]"}],"]"}],",",RowBox[
+{"D","[",RowBox[{RowBox[{"{",RowBox[{RowBox[{"1","*",RowBox[{"Sin","[","\[Phi]","]"}],"*",RowBox[
+{"Cos","[","\[Theta]","]"}]}],",",RowBox[{RowBox[{"Sin","[","\[Phi]","]"}],"*",RowBox[
+{"Sin","[","\[Theta]","]"}]}],",",RowBox[{"Cos","[","\[Phi]","]"}]}],"}"}],",","\[Theta]"}],"]"}]}],"]"}],"]"}]],
+"Input",CellID->119,CellLabel->"In[21]:= "],Cell[
+BoxData[SqrtBox[RowBox[{SuperscriptBox[
+RowBox[{"Abs","[",RowBox[{RowBox[{"Cos","[","\[Theta]","]"}]," ",SuperscriptBox[RowBox[
+{"Sin","[","\[Phi]","]"}],"2"]}],"]"}],"2"],"+",SuperscriptBox[RowBox[{"Abs","[",RowBox[
+{RowBox[{"Sin","[","\[Theta]","]"}]," ",SuperscriptBox[RowBox[{"Sin","[","\[Phi]","]"}],
+"2"]}],"]"}],"2"],"+",SuperscriptBox[RowBox[{"Abs","[",RowBox[{RowBox[{SuperscriptBox[
+RowBox[{"Cos","[","\[Theta]","]"}],"2"]," ",RowBox[{"Cos","[","\[Phi]","]"}]," ",RowBox[
+{"Sin","[","\[Phi]","]"}]}],"+",RowBox[{RowBox[{"Cos","[","\[Phi]","]"}]," ",SuperscriptBox[
+RowBox[{"Sin","[","\[Theta]","]"}],"2"]," ",RowBox[{"Sin","[","\[Phi]","]"}]}]}],"]"}],
+"2"]}]],StandardForm],"Output",CellID->125,CellLabel->"Out[21]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{RowBox[{"Sqrt","[",RowBox[{RowBox[{RowBox[{"(",RowBox[{RowBox[
+{"Cos","[","\[Theta]","]"}]," ",RowBox[{RowBox[{"Sin","[","\[Phi]","]"}],"^","2"}]}],")"}],"^","2"}]," ","+"," ","\n"," ",RowBox[
+{RowBox[{"(",RowBox[{RowBox[{"Sin","[","\[Theta]","]"}]," ",RowBox[{RowBox[{"Sin","[","\[Phi]","]"}],"^","2"}]}],")"}],"^","2"}]," ","+"," ","\n"," ",RowBox[
+{RowBox[{"(",RowBox[{RowBox[{RowBox[{RowBox[{"Cos","[","\[Theta]","]"}],"^","2"}]," ",RowBox[
+{"Cos","[","\[Phi]","]"}]," ",RowBox[{"Sin","[","\[Phi]","]"}]}]," ","+"," ","\n","\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]",RowBox[
+{RowBox[{"Cos","[","\[Phi]","]"}]," ",RowBox[{RowBox[{"Sin","[","\[Theta]","]"}],"^","2"}]," ",RowBox[
+{"Sin","[","\[Phi]","]"}]}]}],")"}],"^","2"}]}],"]"}],"\n"}]],"Input",CellID->130,
+CellLabel->"In[22]:= "],Cell[
+BoxData[SqrtBox[RowBox[{RowBox[{SuperscriptBox[RowBox[
+{"Cos","[","\[Theta]","]"}],"2"]," ",SuperscriptBox[RowBox[{"Sin","[","\[Phi]","]"}],
+"4"]}],"+",RowBox[{SuperscriptBox[RowBox[{"Sin","[","\[Theta]","]"}],"2"]," ",SuperscriptBox[
+RowBox[{"Sin","[","\[Phi]","]"}],"4"]}],"+",SuperscriptBox[RowBox[{"(",RowBox[{RowBox[
+{SuperscriptBox[RowBox[{"Cos","[","\[Theta]","]"}],"2"]," ",RowBox[{"Cos","[","\[Phi]","]"}]," ",RowBox[
+{"Sin","[","\[Phi]","]"}]}],"+",RowBox[{RowBox[{"Cos","[","\[Phi]","]"}]," ",SuperscriptBox[
+RowBox[{"Sin","[","\[Theta]","]"}],"2"]," ",RowBox[{"Sin","[","\[Phi]","]"}]}]}],")"}],
+"2"]}]],StandardForm],"Output",CellID->131,CellLabel->"Out[22]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"Simplify","[",SqrtBox[RowBox[{RowBox[{SuperscriptBox[RowBox[
+{"Cos","[","\[Theta]","]"}],"2"]," ",SuperscriptBox[RowBox[{"Sin","[","\[Phi]","]"}],
+"4"]}],"+",RowBox[{SuperscriptBox[RowBox[{"Sin","[","\[Theta]","]"}],"2"]," ",SuperscriptBox[
+RowBox[{"Sin","[","\[Phi]","]"}],"4"]}],"+",SuperscriptBox[RowBox[{"(",RowBox[{RowBox[
+{SuperscriptBox[RowBox[{"Cos","[","\[Theta]","]"}],"2"]," ",RowBox[{"Cos","[","\[Phi]","]"}]," ",RowBox[
+{"Sin","[","\[Phi]","]"}]}],"+",RowBox[{RowBox[{"Cos","[","\[Phi]","]"}]," ",SuperscriptBox[
+RowBox[{"Sin","[","\[Theta]","]"}],"2"]," ",RowBox[{"Sin","[","\[Phi]","]"}]}]}],")"}],
+"2"]}]],"]"}]],"Input",NumberMarks->False,CellLabel->"In[23]:= "],Cell[
+BoxData[SqrtBox[
+SuperscriptBox[RowBox[{"Sin","[","\[Phi]","]"}],"2"]],StandardForm],"Output",CellID->137,
+CellLabel->"Out[23]= "]},Open]]},Open]],Cell[
+CellGroupData[{Cell[
+TextData[{"Triple"," ","Integrate"}],
+"Section",CellID->76],Cell[
+CellGroupData[{Cell[
+BoxData[{RowBox[{"SetAttributes","[","TripInt",","," ","HoldAll","]",";"}],"\n",RowBox[
+{"TripInt","[","f_",","," ","{","a_",","," ","aLower_",",","aUpper_","}",",","{","b_",",","bLower_",",","bUpper_","}",",","{","c_",",","cLower_",",","cUpper_","}","]"," ",":="," ","\n"," ","Module","[","{","localF",",","localA",",","localALower",",","localAUpper",",","localB",",","localBLower",",","localBUpper",",","localC",",","localCLower",",","localCUpper",","," ","int1",",","int2","}",",","\[NonBreakingSpace]","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]"," "," "}]],StyleBox[RowBox[{"l","o","calF"}]],"=","f",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localA","=","a",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localALower","=","aLower",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localAUpper","=","aUpper",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localB","=","b",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localBLower","=","bLower",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localBUpper","=","bUpper",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]"," "," "," "}]],"localC","=","c",";","\n",StyleBox[RowBox[
+{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"localCLower","=","cLower",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],StyleBox[RowBox[{"l","o","calCUpper"}]],"=","cUpper",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"Simplify","[","Integrate","[","Integrate","[","Integrate","[","Simplify","[","localF",",","Element","[","{","localA",",","localB",",","localC","}",",","Reals","]","]",",","{","localA",","," ","localALower",",","localAUpper","}","]",",","{","localB",","," ","localBLower",",","localBUpper","}","]",",","{","localC",","," ","localCLower",",","localCUpper","}","]",",","Element","[","{","localA",",","localB",",","localC","}",",","Reals","]","]","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"]"}],"\n",RowBox[{StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"TripInt","[","2","x","-","1",",","{","x",",","0",",","3","}",",","{","y",",","0",",","1","}",",","{","z",",","0",",","2","}","]"}]}],
+"Input",CellID->78,CellLabel->"In[1]:= "],Cell[
+BoxData["12",StandardForm],"Output",
+CellID->80,CellLabel->"Out[3]= "]},Open]]},Open]]},StyleDefinitions->"Default.nb",
+FrontEndVersion->"10.0 for Wolfram Cloud Platform (June 2 2014)"]

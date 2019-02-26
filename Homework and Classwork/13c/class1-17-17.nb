@@ -1,0 +1,60 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"D","[",RowBox[{RowBox[{"Sqrt","[",RowBox[
+{RowBox[{RowBox[{"(",RowBox[{"3","-",RowBox[{"2","x"}]}],")"}],"^","2"}],"+",RowBox[
+{"x","^","2"}]}],"]"}],",","x"}],"]"}]],"Input",CellID->1,CellLabel->"In[1]:= "],Cell[
+BoxData[
+FractionBox[RowBox[{RowBox[{RowBox[{"-","4"}]," ",RowBox[{"(",RowBox[{"3","-",RowBox[
+{"2"," ","x"}]}],")"}]}],"+",RowBox[{"2"," ","x"}]}],RowBox[{"2"," ",SqrtBox[RowBox[
+{SuperscriptBox[RowBox[{"(",RowBox[{"3","-",RowBox[{"2"," ","x"}]}],")"}],"2"],"+",SuperscriptBox[
+"x","2"]}]]}]],StandardForm],"Output",CellID->2,CellLabel->"Out[1]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"Solve","[",RowBox[{RowBox[{"%","==","0"}],",","x"}],"]"}]],
+"Input",CellID->8,CellLabel->"In[3]:= "],Cell[
+BoxData[TemplateBox[{"Solve","ifun","\"Inverse functions are being used by \\!\\(\\*TagBox[\\\"Solve\\\", Short[#1, 5] & ]\\), so some solutions may not be found; use Reduce for complete solution information.\"",2,3,3,21907890093092210688,$Failed},
+"MessageTemplate"],StandardForm],"Message","MSG",CellID->16],Cell[
+BoxData[RowBox[
+{"{",RowBox[{"{",RowBox[{"x","\[Rule]",RowBox[{RowBox[{"InverseFunction","[",RowBox[
+{"Solve",",","2",",","2"}],"]"}],"[",RowBox[{"0",",","0"}],"]"}]}],"}"}],"}"}],StandardForm],
+"Output",CellID->18,CellLabel->"Out[3]= "]},Open]],Cell[
+CellGroupData[{Cell[
+BoxData[
+RowBox[{"Solve","[",RowBox[{RowBox[{RowBox[{RowBox[{"(",RowBox[{RowBox[{"5","x"}],"-","6"}],")"}],"/",RowBox[
+{"(",RowBox[{"Sqrt","[",RowBox[{RowBox[{RowBox[{"(",RowBox[{"3","-",RowBox[{"2","x"}]}],")"}],"^","2"}],"+",RowBox[
+{"x","^","2"}]}],"]"}],")"}]}],"==","0"}],",","x"}],"]"}]],"Input",CellID->22,CellLabel->"In[4]:= "],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"{",RowBox[{"x","\[Rule]",FractionBox["6","5"]}],"}"}],"}"}],
+StandardForm],"Output",CellID->23,CellLabel->"Out[4]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"D","[",RowBox[{RowBox[{RowBox[{"(",RowBox[{RowBox[{"(",RowBox[
+{"y","-","32"}],")"}],RowBox[{"x","^","2"}]}],")"}],"/","2"}],",","y"}],"]"}]],"Input",
+CellID->28,CellLabel->"In[6]:= "],Cell[
+BoxData[FractionBox[SuperscriptBox["x","2"],
+"2"],StandardForm],"Output",CellID->34,CellLabel->"Out[6]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"4","*","32"}]],"Input",CellID->39,CellLabel->"In[7]:= "],Cell[
+BoxData[
+"128",StandardForm],"Output",CellID->40,CellLabel->"Out[7]= "]},Open]],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"%","/","3"}]],"Input",CellID->45,CellLabel->"In[8]:= "],Cell[
+BoxData[
+FractionBox["128","3"],StandardForm],"Output",CellID->46,CellLabel->"Out[8]= "]},
+Open]],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"Solve","[",RowBox[{RowBox[{RowBox[
+{"10000","-",RowBox[{RowBox[{RowBox[{"(",RowBox[{"128","/","3"}],")"}],"^","2"}],"*","x"}]}],"==","0"}],",","x"}],"]"}]],
+"Input",CellID->51,CellLabel->"In[9]:= "],Cell[
+BoxData[RowBox[{"{",RowBox[{"{",RowBox[
+{"x","\[Rule]",FractionBox["5625","1024"]}],"}"}],"}"}],StandardForm],"Output",CellID->52,
+CellLabel->"Out[9]= "]},Open]],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"10000","/",RowBox[
+{"(",RowBox[{RowBox[{"(",RowBox[{"128","/","3"}],")"}],"^","2"}],")"}]}]],"Input",
+CellID->57,CellLabel->"In[10]:= "],Cell[
+BoxData[FractionBox["5625","1024"],StandardForm],
+"Output",CellID->58,CellLabel->"Out[10]= "]},Open]]},StyleDefinitions->"Default.nb",
+FrontEndVersion->"10.0 for Wolfram Cloud Platform (June 2 2014)"]

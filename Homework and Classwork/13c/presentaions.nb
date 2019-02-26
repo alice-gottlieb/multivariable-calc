@@ -1,0 +1,139 @@
+Notebook[{Cell[
+BoxData[""],"Input",CellID->12],Cell[
+"\<\>","Text",CellID->10],Cell[
+TextData[
+{"#","18"}],"Text",CellID->1,FontSize->18,FontWeight->Bold,FontVariations->{Underline->True}],Cell[
+BoxData[
+RowBox[{RowBox[{"g","[",RowBox[{"x_",",","y_"}],"]"}],":=",RowBox[{"y","-",RowBox[
+{"2","x"}]}]}]],"Input",CellID->2,CellLabel->"In[1]:= "],Cell[
+BoxData[RowBox[{RowBox[
+{"f","[",RowBox[{"x_",",","y_"}],"]"}],":=",RowBox[{RowBox[{RowBox[{"(",RowBox[{"x","-","2"}],")"}],"^","2"}],"+",RowBox[
+{RowBox[{"(",RowBox[{"y","-","4"}],")"}],"^","2"}]}]}]],"Input",CellID->3,CellLabel->"In[2]:= "],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"Solve","[",RowBox[{RowBox[{RowBox[{RowBox[{"D","[",RowBox[
+{RowBox[{"f","[",RowBox[{"x",",","y"}],"]"}],",","x"}],"]"}],"==",RowBox[{"\[Lambda]","*",RowBox[
+{"D","[",RowBox[{RowBox[{"g","[",RowBox[{"x",",","y"}],"]"}],",","x"}],"]"}]}]}],"&&",RowBox[
+{RowBox[{"D","[",RowBox[{RowBox[{"f","[",RowBox[{"x",",","y"}],"]"}],",","y"}],"]"}],"==",RowBox[
+{"\[Lambda]","*",RowBox[{"D","[",RowBox[{RowBox[{"g","[",RowBox[{"x",",","y"}],"]"}],",","y"}],"]"}]}]}]}],",",RowBox[
+{"{",RowBox[{"x",",","y"}],"}"}]}],"]"}]],"Input",CellID->4,CellLabel->"In[9]:= "],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"{",RowBox[{RowBox[{"x","\[Rule]",RowBox[{"2","-","\[Lambda]"}]}],",",RowBox[
+{"y","\[Rule]",FractionBox[RowBox[{"8","+","\[Lambda]"}],"2"]}]}],"}"}],"}"}],StandardForm],
+"Output",CellID->39,CellLabel->"Out[9]= "]},Open]],Cell[
+TextData[{"\[Lambda]","=","2","-","x","\n","y","=(","8","+","2","-","x",")/","2","\n","y","=","5","-","x","/","2","\n","5","-","x","/","2","=","2x","+","3"}],
+"Text",CellID->37],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"Solve","[",RowBox[
+{RowBox[{RowBox[{"5","-",RowBox[{"x","/","2"}]}],"==",RowBox[{RowBox[{"2","x"}],"+","3"}]}],",","x"}],"]"}]],
+"Input",CellID->38,CellLabel->"In[11]:= "],Cell[
+BoxData[RowBox[{"{",RowBox[{"{",RowBox[
+{"x","\[Rule]",FractionBox["4","5"]}],"}"}],"}"}],StandardForm],"Output",CellID->51,
+CellLabel->"Out[11]= "]},Open]],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"5","-",RowBox[
+{RowBox[{"(",RowBox[{"4","/","5"}],")"}],"/","2"}]}]],"Input",CellID->5,CellLabel->"In[12]:= "],Cell[
+BoxData[
+FractionBox["23","5"],StandardForm],"Output",CellID->56,CellLabel->"Out[12]= "]},
+Open]],Cell[
+TextData[{"(","4","/","5",StyleBox[RowBox[{","," "}]],"23","/","5",")"}],
+"Text",CellID->61,FontWeight->Bold],Cell[
+TextData[{StyleBox["Wire",FontWeight->Bold],StyleBox[
+" ",FontWeight->Bold],StyleBox["Problem",FontWeight->Bold]}],"Text",CellID->62,FontSize->18,
+FontWeight->Bold,FontVariations->{Underline->True}],Cell[
+TextData[{"c",StyleBox[
+RowBox[{":"," "}]],"amount"," ","of"," ","wire"," ","used"," ","for"," ","cicle","\n","s",StyleBox[
+RowBox[{":"," "}]],"amount"," ","of"," ","wire"," ","used"," ","for"," ","square","\n","A",StyleBox[
+RowBox[{":"," "}]],"total"," ","area"," ","encolsed"," ","by"," ","both"," ","the"," ","circle"," ","and"," ","the"," ","square"}],
+"Text",CellID->63,FontSize->14],Cell[
+BoxData[RowBox[{RowBox[{"A","[",RowBox[{"c_",",","s_"}],"]"}],":=",RowBox[
+{RowBox[{RowBox[{"(",RowBox[{"c","^","2"}],")"}],"/",RowBox[{"(",RowBox[{"4","*","\[Pi]"}],")"}]}],"+",RowBox[
+{RowBox[{"(",RowBox[{"s","^","2"}],")"}],"/","16"}]}]}]],"Input",CellID->6,CellLabel->"In[8]:= "],Cell[
+TextData[
+{"h",StyleBox[RowBox[{":"," "}]],"constraint"}],"Text",CellID->25],Cell[
+BoxData[
+RowBox[{RowBox[{"h","[",RowBox[{"c_",",","s_"}],"]"}],":=",RowBox[{"c","+","s"}]}]],
+"Input",CellID->26,CellLabel->"In[9]:= "],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[
+{"Solve","[",RowBox[{RowBox[{RowBox[{RowBox[{"D","[",RowBox[{RowBox[{"A","[",RowBox[
+{"c",",","s"}],"]"}],",","c"}],"]"}],"==",RowBox[{"\[Lambda]","*",RowBox[{"D","[",RowBox[
+{RowBox[{"h","[",RowBox[{"c",",","s"}],"]"}],",","c"}],"]"}]}]}],"&&",RowBox[{RowBox[
+{"D","[",RowBox[{RowBox[{"A","[",RowBox[{"c",",","s"}],"]"}],",","s"}],"]"}],"==",RowBox[
+{"\[Lambda]","*",RowBox[{"D","[",RowBox[{RowBox[{"h","[",RowBox[{"c",",","s"}],"]"}],",","s"}],"]"}]}]}]}],",",RowBox[
+{"{",RowBox[{"c",",","s"}],"}"}]}],"]"}]],"Input",CellID->27,CellLabel->"In[6]:= "],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"{",RowBox[{RowBox[{"c","\[Rule]",RowBox[{"2"," ","\[Pi]"," ","\[Lambda]"}]}],",",RowBox[
+{"s","\[Rule]",RowBox[{"8"," ","\[Lambda]"}]}]}],"}"}],"}"}],StandardForm],"Output",
+CellID->28,CellLabel->"Out[6]= "]},Open]],Cell[
+TextData[{"\[Lambda]","=","s","/","8","\n","c","=","2\[Pi]","(","s","/","8",")","\n","12","-","s","=","2\[Pi]","(","s","/","8",")"}],
+"Text",CellID->33],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"Solve","[",RowBox[
+{RowBox[{RowBox[{"12","-","s"}],"==",RowBox[{"2","\[Pi]",RowBox[{"(",RowBox[{"s","/","8"}],")"}]}]}],",","s"}],"]"}]],
+"Input",CellID->34,CellLabel->"In[9]:= "],Cell[
+BoxData[RowBox[{"{",RowBox[{"{",RowBox[
+{"s","\[Rule]",FractionBox["48",RowBox[{"4","+","\[Pi]"}]]}],"}"}],"}"}],StandardForm],
+"Output",CellID->48,CellLabel->"Out[9]= "]},Open]],Cell[
+TextData[{"Test"," ","boundaries"," ","and"," ","critical"," ","point"," ","at"," ","s","=","48","/(","4","+","\[Pi]",")"}],
+"Text",CellID->53],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"p","=",RowBox[{"{",RowBox[
+{RowBox[{"A","[",RowBox[{"12",",","0"}],"]"}],",",RowBox[{"A","[",RowBox[{RowBox[
+{"12","-",RowBox[{"48","/",RowBox[{"(",RowBox[{"4","+","\[Pi]"}],")"}]}]}],",",RowBox[
+{"48","/",RowBox[{"(",RowBox[{"4","+","\[Pi]"}],")"}]}]}],"]"}],",",RowBox[{"A","[",RowBox[
+{"0",",","12"}],"]"}]}],"}"}]}]],"Input",CellID->54,CellLabel->"In[10]:= "],Cell[
+BoxData[
+RowBox[{"{",RowBox[{FractionBox["36","\[Pi]"],",",RowBox[{FractionBox["144",SuperscriptBox[
+RowBox[{"(",RowBox[{"4","+","\[Pi]"}],")"}],"2"]],"+",FractionBox[SuperscriptBox[
+RowBox[{"(",RowBox[{"12","-",FractionBox["48",RowBox[{"4","+","\[Pi]"}]]}],")"}],
+"2"],RowBox[{"4"," ","\[Pi]"}]]}],",","9"}],"}"}],StandardForm],"Output",CellID->49,
+CellLabel->"Out[10]= "]},Open]],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"Max","[","p","]"}]],
+"Input",CellID->60,CellLabel->"In[11]:= "],Cell[
+BoxData[FractionBox["36","\[Pi]"],
+StandardForm],"Output",CellID->57,CellLabel->"Out[11]= "]},Open]],Cell[
+TextData[
+{"Max"," ","at"," ","c","=","12",StyleBox[RowBox[{","," "}]],"s","=","0","\n","Don","'","t"," ","cut"," ","the"," ","wire"," ","and"," ","use"," ","it"," ","all"," ","for"," ","a"," ","ciricle"}],
+"Text",CellID->69,FontWeight->Bold],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"Min","[","p","]"}]],
+"Input",CellID->70,CellLabel->"In[12]:= "],Cell[
+BoxData[RowBox[{FractionBox["144",
+SuperscriptBox[RowBox[{"(",RowBox[{"4","+","\[Pi]"}],")"}],"2"]],"+",FractionBox[
+SuperscriptBox[RowBox[{"(",RowBox[{"12","-",FractionBox["48",RowBox[{"4","+","\[Pi]"}]]}],")"}],
+"2"],RowBox[{"4"," ","\[Pi]"}]]}],StandardForm],"Output",CellID->65,CellLabel->"Out[12]= "]},
+Open]],Cell[
+TextData[{StyleBox["Min",FontWeight->Bold],StyleBox[" ",FontWeight->Bold],StyleBox[
+"at",FontWeight->Bold],StyleBox[" ",FontWeight->Bold],StyleBox["c",FontWeight->Bold],StyleBox[
+"=",FontWeight->Bold],StyleBox["12",FontWeight->Bold],StyleBox["-",FontWeight->Bold],StyleBox[
+"48",FontWeight->Bold],StyleBox["/(",FontWeight->Bold],StyleBox["4",FontWeight->Bold],StyleBox[
+"+",FontWeight->Bold],StyleBox["\[Pi]",FontWeight->Bold],StyleBox[RowBox[{StyleBox[
+"),",FontWeight->Bold],StyleBox[" ",FontWeight->Bold]}]],StyleBox["s",FontWeight->Bold],StyleBox[
+"=",FontWeight->Bold],StyleBox["48",FontWeight->Bold],StyleBox["/(",FontWeight->Bold],StyleBox[
+"4",FontWeight->Bold],StyleBox["+",FontWeight->Bold],StyleBox["\[Pi]",FontWeight->Bold],StyleBox[
+")",FontWeight->Bold],"\n",StyleBox["Cut",FontWeight->Bold],StyleBox[" ",FontWeight->Bold],StyleBox[
+"48",FontWeight->Bold],StyleBox["/(",FontWeight->Bold],StyleBox["4",FontWeight->Bold],StyleBox[
+"+",FontWeight->Bold],StyleBox["\[Pi]",FontWeight->Bold],StyleBox[RowBox[{StyleBox[
+")",FontWeight->Bold],StyleBox[" ",FontWeight->Bold]}]],StyleBox["and",FontWeight->Bold],StyleBox[
+" ",FontWeight->Bold],StyleBox["use",FontWeight->Bold],StyleBox[" ",FontWeight->Bold],StyleBox[
+"48",FontWeight->Bold],StyleBox["/(",FontWeight->Bold],StyleBox["4",FontWeight->Bold],StyleBox[
+"+",FontWeight->Bold],StyleBox["\[Pi]",FontWeight->Bold],StyleBox[RowBox[{StyleBox[
+")",FontWeight->Bold],StyleBox[" ",FontWeight->Bold]}]],StyleBox["to",FontWeight->Bold],StyleBox[
+" ",FontWeight->Bold],StyleBox["make",FontWeight->Bold],StyleBox[" ",FontWeight->Bold],StyleBox[
+"the",FontWeight->Bold],StyleBox[" ",FontWeight->Bold],StyleBox["square",FontWeight->Bold],StyleBox[
+" ",FontWeight->Bold],StyleBox["and",FontWeight->Bold],StyleBox[" ",FontWeight->Bold],StyleBox[
+"the",FontWeight->Bold],StyleBox[" ",FontWeight->Bold],StyleBox["rest",FontWeight->Bold],StyleBox[
+" ",FontWeight->Bold],StyleBox["for",FontWeight->Bold],StyleBox[" ",FontWeight->Bold],StyleBox[
+"the",FontWeight->Bold],StyleBox[" ",FontWeight->Bold],StyleBox["circle",FontWeight->Bold]}],
+"Text",CellID->77],Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"{",RowBox[{RowBox[
+{"12.","-",RowBox[{"48","/",RowBox[{"(",RowBox[{"4","+","\[Pi]"}],")"}]}]}],",",RowBox[
+{"48.","/",RowBox[{"(",RowBox[{"4","+","\[Pi]"}],")"}]}]}],"}"}]],"Input",CellID->9,
+CellLabel->"In[14]:= "],Cell[
+BoxData[RowBox[{"{",RowBox[{"5.278810157861312`",",","6.721189842138688`"}],"}"}],
+StandardForm],"Output",CellID->11,CellLabel->"Out[14]= "]},Open]],Cell[
+BoxData[""],
+"Input",CellID->76]},StyleDefinitions->"Default.nb",FrontEndVersion->"10.0 for Wolfram Cloud Platform (June 2 2014)"]

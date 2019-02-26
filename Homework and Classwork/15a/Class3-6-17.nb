@@ -1,0 +1,42 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{"Animate","[",RowBox[{RowBox[
+{"VectorPlot","[",RowBox[{RowBox[{"{",RowBox[{RowBox[{"Sin","[",RowBox[{"a","*","\[Pi]","*","y"}],"]"}],",",RowBox[
+{"Cos","[",RowBox[{"b","*","\[Pi]","*","x"}],"]"}]}],"}"}],",",RowBox[{"{",RowBox[
+{"x",",",RowBox[{"-","3"}],",","3"}],"}"}],",",RowBox[{"{",RowBox[{"y",",",RowBox[
+{"-","3"}],",","3"}],"}"}]}],"]"}],","," ",RowBox[{"{",RowBox[{"a",",","1",",","20"}],"}"}],",",RowBox[
+{"{",RowBox[{"b",",","1",",","20"}],"}"}]}],"]"}]],"Input",CellID->1,CellLabel->"In[1]:= "],Cell[
+BoxData[
+TagBox[StyleBox[DynamicModuleBox[{Set[a$$,1],Set[b$$,1],Set[Typeset`show$$,True],Set[
+Typeset`bookmarkList$$,{}],Set[Typeset`bookmarkMode$$,"Menu"],Typeset`animator$$,Set[
+Typeset`animvar$$,1],Set[Typeset`name$$,"\"untitled\""],Set[Typeset`specs$$,{{Hold[
+a$$],1,20},{Hold[b$$],1,20}}],Set[Typeset`size$$,Automatic],Set[Typeset`update$$,
+0],Set[Typeset`initDone$$,False],Set[Typeset`skipInitDone$$,True],Set[a$12309$$,0],Set[
+b$12314$$,0]},DynamicBox[Manipulate`ManipulateBoxes[1,StandardForm,RuleDelayed["Variables",
+{Set[a$$,1],Set[b$$,1]}],RuleDelayed["ControllerVariables",{Hold[a$$,a$12309$$,0],Hold[
+b$$,b$12314$$,0]}],RuleDelayed["OtherVariables",{Typeset`show$$,Typeset`bookmarkList$$,Typeset`bookmarkMode$$,Typeset`animator$$,Typeset`animvar$$,Typeset`name$$,Typeset`specs$$,Typeset`size$$,Typeset`update$$,Typeset`initDone$$,Typeset`skipInitDone$$}],
+RuleDelayed["Body",VectorPlot[{Sin[Times[a$$,Pi,y]],Cos[Times[b$$,Pi,x]]},{x,-3,3},
+{y,-3,3}]],RuleDelayed["Specifications",{{a$$,1,20,AppearanceElements->{"ProgressSlider","PlayPauseButton","FasterSlowerButtons","DirectionButton"}},{b$$,1,20,AppearanceElements->{"ProgressSlider","PlayPauseButton","FasterSlowerButtons","DirectionButton"}}}],
+RuleDelayed["Options",{ControlType->Animator,AppearanceElements->None,DefaultBaseStyle->"Animate",DefaultLabelStyle->"AnimateLabel",SynchronousUpdating->True,ShrinkingDelay->10.0}],
+RuleDelayed["DefaultOptions",{}]],SingleEvaluation->True],RuleDelayed[DynamicModuleValues,
+{}],RuleDelayed[Deinitialization,None],RuleDelayed[UntrackedVariables,{Typeset`size$$}],
+SynchronousInitialization->True,RuleDelayed[UnsavedVariables,{Typeset`initDone$$}],
+RuleDelayed[UndoTrackedVariables,{Typeset`show$$,Typeset`bookmarkMode$$}]],"Animate",
+Deployed->True,StripOnInput->False],Manipulate`InterpretManipulate[1]],StandardForm],
+"Output",CellID->2,CellLabel->"Out[1]= "]},Open]],Cell[
+CellGroupData[{Cell[
+BoxData[
+RowBox[{"VectorPlot3D","[",RowBox[{RowBox[{"{",RowBox[{"x",","," ","y",","," ","z"}],"}"}],","," ",RowBox[
+{"{",RowBox[{"x",","," ",RowBox[{"-","1"}],","," ","1"}],"}"}],","," ",RowBox[{"{",RowBox[
+{"y",","," ",RowBox[{"-","1"}],","," ","1"}],"}"}],","," ",RowBox[{"{",RowBox[{"z",","," ",RowBox[
+{"-","1"}],","," ","1"}],"}"}]}],"]"}]],"Input",CellID->57,CellLabel->"In[5]:= "],Cell[
+BoxData[
+Graphics3DBox[{{Hue[0.67,0.6,0.6],Directive[RGBColor[0.2947336,0.4054232,0.5678384000000001]],{}},{Hue[
+0.9060679774997897,0.6,0.6],Directive[RGBColor[0.2947336,0.4054232,0.5678384000000001]],{}},{Hue[
+0.1421359549995791,0.6,0.6],Directive[RGBColor[0.2947336,0.4054232,0.5678384000000001]],{}}},
+DisplayFunction->Identity,Axes->True,BoxRatios->{1,1,1},RuleDelayed[DisplayFunction,
+Identity],FaceGridsStyle->Automatic,Method->{"DefaultBoundaryStyle"->Automatic,"TransparentPolygonMesh"->True,"TubePoints"->13,"ConePoints"->13},
+PlotRange->{{-1.2474358296526968,1.2474358296526968},{-1.2474358296526968,1.2474358296526968},{-1.2474358296526968,1.2474358296526968}},
+PlotRangePadding->{Scaled[0.02],Scaled[0.02],Scaled[0.02]},Ticks->{Automatic,Automatic,Automatic}],
+StandardForm],"Output",CellID->99,CellLabel->"Out[5]= "]},Open]]},StyleDefinitions->"Default.nb",
+FrontEndVersion->"10.0 for Wolfram Cloud Platform (June 2 2014)"]
